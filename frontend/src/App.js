@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import './App.css'
+import EvaluationMetrics from './EvaluationMetrics'
 
 function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [documentData, setDocumentData] = useState([])
+  const [evaluationMetrics, setEvaluationMetrics] = useState({})
   const [selectedFile, setSelectedFile] = useState(null)
 
   const handleFileChange = (event) => {
@@ -32,6 +34,7 @@ function App() {
         .then((response) => response.json())
         .then((data) => {
           setDocumentData(data.summary)
+          setEvaluationMetrics(data.evaluation)
         })
         .catch((error) => console.error('Error:', error))
         .finally(() => setIsLoading(false))
@@ -65,34 +68,37 @@ function App() {
           <p className='loading-text'>Summarizing document...</p>{' '}
         </div>
       ) : documentData.length > 0 ? (
-        <div className='content'>
-          <div className='column full-document'>
-            <div className='row'>
-              <div className='half-screen'>
-                <h3>Original Text</h3>
-              </div>
-              <div className='half-screen'>
-                <h3>Summarised Text</h3>
-              </div>
-            </div>
-            {documentData.map((item, index) => (
-              <div key={`${index}-original`} className='row'>
-                <div key={index} className='half-screen'>
-                  {item.original_text}
+        <>
+          <EvaluationMetrics evaluation={evaluationMetrics} />
+          <div className='content'>
+            <div className='column full-document'>
+              <div className='row'>
+                <div className='half-screen'>
+                  <h3>Original Text</h3>
                 </div>
-
-                {item.summarised_text && (
-                  <div
-                    key={`${index}-summarized`}
-                    className='summary half-screen'
-                  >
-                    {item.summarised_text}
-                  </div>
-                )}
+                <div className='half-screen'>
+                  <h3>Summarised Text</h3>
+                </div>
               </div>
-            ))}
+              {documentData.map((item, index) => (
+                <div key={`${index}-original`} className='row'>
+                  <div key={index} className='half-screen'>
+                    {item.original_text}
+                  </div>
+
+                  {item.summarised_text && (
+                    <div
+                      key={`${index}-summarized`}
+                      className='summary half-screen'
+                    >
+                      {item.summarised_text}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </>
       ) : null}
     </div>
   )
