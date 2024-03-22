@@ -1,61 +1,66 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from transformers import pipeline
-import re
 from rouge import Rouge
 
 app = Flask(__name__)
-CORS(app)  # Add this line to enable CORS for all routes
+CORS(app) 
 
 # Initialize the summarization pipeline
-summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+# summarizer = pipeline("summarization", model="facebook/bart-large-cnn") # this is bad..
+summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+
+min_word_count = 50
 
 def preprocess_text(text):
-    min_word_count = 50
-    non_informative_keywords = ['Exhibit', 'EXECUTION COPY']
-    
-    paragraphs = text.split("\n\n")
-    preprocessed_paragraphs = [" ".join(paragraph.replace("\t", " ").split()) for paragraph in paragraphs]
-    filtered_paragraphs = [paragraph for paragraph in preprocessed_paragraphs
-                           if not any(keyword in paragraph for keyword in non_informative_keywords)
-                           and paragraph.strip() and len(paragraph.split()) >= min_word_count]
-    return filtered_paragraphs
-
-def condense_summary(summary):
-    sentences = summary.split('. ')
-    if len(sentences) > 1:
-        return '. '.join(sentences[:-1])
-    return summary
-
-@app.route('/')
-def test_hello():
-    return 'hello world'
+    # Split text into paragraphs based on two or more newlines
+    sections = text.split("\n\n")
+    sections = [section.strip() for section in sections if section.strip()]
+    sections = [section.replace('\xa0', ' ') for section in sections]
+    # Normalize whitespace and strip spaces for each paragraph
+    sections = [" ".join(section.replace("\t", " ").split()) for section in sections]
+    return sections
 
 @app.route('/summarize', methods=['POST'])
 def summarize_document():
-    data = request.json
-    if 'document' not in data:
-        return jsonify({'error': 'No document uploaded'}), 400
+    # Check if there is a file in the request
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part'}), 400
+    file = request.files['file']
 
-    document = data['document']
+    # empty file without a filename.
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+
+    document = file.read().decode('utf-8')
     preprocessed_paragraphs = preprocess_text(document)
-
     summaries = []
 
-    for paragraph in preprocessed_paragraphs:
-        try:
-            batch_summaries = summarizer(paragraph, max_length=70, min_length=30, do_sample=False)
-            for summary in batch_summaries:
-                condensed = condense_summary(summary['summary_text'])
-                if condensed: 
-                    summaries.append(condensed)
-                summaries.append(condensed)
-        except Exception as e:
-            print(f"Error processing paragraph: {e}")
-    
-    generated_summary = " ".join(summaries)
+    for i in range(0, len(preprocessed_paragraphs)):
+        paragraph = preprocessed_paragraphs[i]
+        word_count = len(paragraph.split())
+        if word_count < min_word_count: 
+            summaries.append({
+                'original_text': paragraph
+            })
+        else:
+            try:
+                input_length = len(paragraph.split())
+                # max_length = max(30, int(input_length * 0.75))  # 75% of input length
+                summary = summarizer(paragraph, min_length=43, do_sample=False) 
+                # print('summary', summary[0])
+                summaries.append({
+                    'original_text': preprocessed_paragraphs[i], 
+                    'summarised_text': summary[0]['summary_text']
+                })
+            except Exception as e:
+                print(f"Error processing index {i}: {e}")
+                summaries.append({
+                    'original_text': paragraph,
+                    'error': str(e)
+                })
 
-    return jsonify({'summary': generated_summary}), 200
+    return jsonify({'summary': summaries}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)

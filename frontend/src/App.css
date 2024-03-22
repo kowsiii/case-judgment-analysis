@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  line-height: 1.5;
+}
+
+.App-header {
+  margin: 24;
+}
+
+p {
+  font-size: 18px;
 }
 
 textarea {
@@ -10,16 +19,112 @@ textarea {
 
 button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: rgb(210, 10, 232);
+  border-radius: 24px;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: rgba(210, 10, 232, 0.885);
 }
 
-p {
-  font-size: 18px;
+button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: no-drop;
+}
+
+.input-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.column {
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  margin: 24px;
+  width: 100%;
+}
+
+.full-document {
+  margin: 24px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px;
+  text-align: start;
+  gap: 12px;
+}
+
+.half-screen {
+  width: 50%;
+}
+
+.summary {
+  background-color: rgba(210, 10, 232, 0.077);
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 50%;
+  height: fit-content;
+}
+
+/* LOADER */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  background-color: transparent;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+
+.spinner {
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top: 5px solid rgb(210, 10, 232);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #333; /* Change as needed */
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
