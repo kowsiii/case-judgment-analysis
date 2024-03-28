@@ -76,7 +76,7 @@ plt.grid(True)
 plt.show()
 
 
-# In[4]:
+# In[6]:
 
 
 # Train LDA model
@@ -95,6 +95,33 @@ print(Topics_Str)
 #Label the topics during the training itself and save these topics in excel
 #and when testing during demo display the dominant topic label
 
+# Save the trained model
+lda_model.save("lda_model")
+dictionary.save("corpus")
+
+
+# In[8]:
+
+
+#Testing the loaded model 
+
+from gensim.models import LdaModel
+from gensim.corpora import Dictionary
+
+# Load the saved LDA model
+lda_model = LdaModel.load("lda_model")
+
+# Load the saved dictionary
+dictionary = Dictionary.load("corpus")
+
+# Assuming you have preprocessed text documents stored in a variable called "new_documents"
+# Tokenize and preprocess the new documents
+new_corpus = [dictionary.doc2bow(preprocess(doc)) for doc in df['Body']]
+
+# Perform inference using the loaded model
+for doc in new_corpus:
+    topics = lda_model[doc]  # Get the topic distribution for each document
+    print(topics)
 
 
 # In[5]:
@@ -319,6 +346,8 @@ for index, row in df.iterrows():
     print("Document {}: Dominant Topic {}".format(index, row['dominant_topic']))
 
 
+# ## Abstractive Summarisation
+
 # In[29]:
 
 
@@ -337,19 +366,6 @@ model_name = 'google/pegasus-xsum'
 torch_device = 'cuda' if torch.cuda.is_available() else 'cpu'
 tokenizer = PegasusTokenizer.from_pretrained(model_name)
 model = PegasusForConditionalGeneration.from_pretrained(model_name).to(torch_device)
-
-
-# In[ ]:
-
-
-#Old Output Incompete 
-for index, row in df.iterrows():
-    src_text = row['Body']
-    #print("Text in Row {}: {}".format(index, text))
-    batch = tokenizer.prepare_seq2seq_batch(src_text, truncation=True, padding='longest',return_tensors='pt')
-    translated = model.generate(**batch)
-    tgt_text = tokenizer.batch_decode(translated, skip_special_tokens=True)
-    print(tgt_text)
 
 
 # In[3]:
