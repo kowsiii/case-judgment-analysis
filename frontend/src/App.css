@@ -1,82 +1,9 @@
 .App {
   text-align: center;
   line-height: 1.5;
-}
-
-.App-header {
-  margin: 24;
-}
-
-p {
-  font-size: 18px;
-}
-
-textarea {
-  width: 80%;
-  height: 200px;
-  margin-bottom: 20px;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: rgb(210, 10, 232);
-  border-radius: 24px;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: rgba(210, 10, 232, 0.885);
-}
-
-button:disabled {
-  background-color: #cccccc;
-  color: #666666;
-  cursor: no-drop;
-}
-
-.input-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-
-.column {
-  flex: 1;
-}
-
-.content {
-  display: flex;
-  margin: 24px;
-  width: 100%;
-}
-
-.full-document {
-  margin: 24px;
-}
-
-.row {
+  width: 100vw;
   display: flex;
   flex-direction: row;
-  margin-bottom: 24px;
-  text-align: start;
-  gap: 12px;
-}
-
-.half-screen {
-  width: 50%;
-}
-
-.summary {
-  background-color: rgba(210, 10, 232, 0.077);
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  width: 50%;
-  height: fit-content;
 }
 
 /* LOADER */
@@ -85,8 +12,8 @@ button:disabled {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 50vh;
-  background-color: transparent;
+  height: 30vh;
+  width: 75vw;
 }
 
 .spinner-container {
@@ -95,11 +22,12 @@ button:disabled {
   align-items: center;
   width: 100px;
   height: 100px;
+  margin: auto;
 }
 
 .spinner {
   border: 5px solid rgba(0, 0, 0, 0.1);
-  border-top: 5px solid rgb(210, 10, 232);
+  border-top: 5px solid #1677ff;
   border-radius: 50%;
   width: 50px;
   height: 50px;

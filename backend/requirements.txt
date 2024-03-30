@@ -6,3 +6,5 @@ transformers==4.12.0
 torch
 torchvision
 tensorflow
+spacy
+sentencepiece
