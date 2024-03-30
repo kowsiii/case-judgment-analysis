@@ -5,8 +5,11 @@ import { CalendarOutlined, BookOutlined, BankOutlined } from '@ant-design/icons'
 import { Menu, Select } from 'antd'
 import { DocumentsSelection } from './DocumentsSelection'
 import { Loading } from './Loading'
+import LandingPage from './LandingPage'
+import { BookFlippingAnimation } from './BookFlippingAnimation'
 
 function App() {
+  const [appState, setAppState] = useState('landingPage') // landingPage or main
   const [isLoadingApp, setIsLoadingApp] = useState(true)
   const [isLoading, setIsLoading] = useState(false)
   const [selectedYearCourtType, setSelectedYearCourtType] = useState([])
@@ -18,8 +21,8 @@ function App() {
   const [documentsByUrl, setDocumentsByUrl] = useState({})
 
   useEffect(() => {
-    getUniqueUrlIds()
-  }, [])
+    if (appState === 'main') getUniqueUrlIds()
+  }, [appState])
 
   const transformUrlData = useMemo(() => {
     const yearKeys = Object.keys(urlData).sort().reverse()
@@ -168,18 +171,31 @@ function App() {
     getDocuments(value)
   }
 
-  if (isLoadingApp)
+  if (appState === 'landingPage') {
+    return <LandingPage setAppState={setAppState} />
+  }
+
+  if (isLoadingApp && appState === 'main')
     return (
-      <div className='App'>
+      <div
+        className='App'
+        style={{
+          background: 'linear-gradient(135deg, #56CCF2 0%, #2F80ED 100%)',
+          height: '100vh',
+          width: '100vw'
+        }}
+      >
         <div
           style={{
             margin: 'auto'
           }}
         >
-          <Loading />
+          <BookFlippingAnimation height={100} width={150} />
+          <div className='pulse-text'>Initialising the app...</div>
         </div>
       </div>
     )
+
   return (
     <div className='App'>
       <div
