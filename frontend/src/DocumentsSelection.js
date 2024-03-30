@@ -71,7 +71,7 @@ export const DocumentsSelection = ({ documents }) => {
 
   useEffect(() => {
     if (selectedDocumentIndex !== null) {
-      setSelectedDocument(documents[selectedDocumentIndex])
+      setSelectedDocument(filteredDocuments[selectedDocumentIndex])
     } else {
       setSelectedDocument(null)
     }
@@ -129,7 +129,8 @@ export const DocumentsSelection = ({ documents }) => {
         document={selectedDocument}
         setSelectedDocumentIndex={setSelectedDocumentIndex}
         currentDocumentIndex={selectedDocumentIndex}
-        lastDocumentIndex={Object.keys(documents).length - 1}
+        lastDocumentIndex={Object.keys(filteredDocuments).length - 1}
+        selectedTopics={selectedTopics}
       />
     )
 

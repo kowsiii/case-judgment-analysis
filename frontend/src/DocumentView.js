@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import { Tabs, Typography, Button } from 'antd'
+import { Tabs, Typography, Button, Popover, Tag, Flex } from 'antd'
 
 import {
   ArrowLeftOutlined,
   ArrowRightOutlined,
-  LeftOutlined
+  LeftOutlined,
+  UnorderedListOutlined
 } from '@ant-design/icons'
 import { NERSection } from './NERSection'
 import { TopicModelSection } from './TopicModelSection'
@@ -14,7 +15,8 @@ export const DocumentView = ({
   document,
   setSelectedDocumentIndex,
   currentDocumentIndex,
-  lastDocumentIndex
+  lastDocumentIndex,
+  selectedTopics
 }) => {
   const [selectedTab, setSelectedTab] = useState('NER')
 
@@ -78,9 +80,43 @@ export const DocumentView = ({
         <div
           style={{
             display: 'flex',
-            direction: 'row'
+            direction: 'row',
+            alignItems: 'center'
           }}
         >
+          {selectedTopics.length > 0 && (
+            <Popover
+              placement='leftBottom'
+              title={'Filtered Topics'}
+              content={
+                <Flex
+                  gap='4px 0'
+                  wrap='wrap'
+                  style={{
+                    maxWidth: 500,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: 8,
+                    margin: '12px 20px'
+                  }}
+                >
+                  {selectedTopics.map((topic) => {
+                    return (
+                      <Tag bordered={false} color={topic.value}>
+                        {topic.label}
+                      </Tag>
+                    )
+                  })}
+                </Flex>
+              }
+            >
+              <Button>
+                <UnorderedListOutlined />
+                Now Browsing
+              </Button>
+            </Popover>
+          )}
           <Button
             icon={<ArrowLeftOutlined />}
             type='text'
