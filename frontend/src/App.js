@@ -1,8 +1,15 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import './App.css'
 import axios from 'axios'
-import { CalendarOutlined, BookOutlined, BankOutlined } from '@ant-design/icons'
-import { Menu, Select } from 'antd'
+import {
+  CalendarOutlined,
+  BookOutlined,
+  BankOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  FileSearchOutlined
+} from '@ant-design/icons'
+import { Menu, Select, Button } from 'antd'
 import { DocumentsSelection } from './DocumentsSelection'
 import { Loading } from './Loading'
 import LandingPage from './LandingPage'
@@ -19,6 +26,12 @@ function App() {
 
   const [urlData, setUrlData] = useState([])
   const [documentsByUrl, setDocumentsByUrl] = useState({})
+  const [documentMetadata, setDocumentMetadata] = useState({})
+  const [collapsed, setCollapsed] = useState(false)
+
+  const toggleCollapsed = () => {
+    setCollapsed(!collapsed)
+  }
 
   useEffect(() => {
     if (appState === 'main') getUniqueUrlIds()
@@ -35,8 +48,8 @@ function App() {
         label: courtType,
         icon: <BankOutlined />,
         children: urlData[year][courtType].map((url, index) => ({
-          key: url.split('/').pop(),
-          label: url.split('/').pop(),
+          key: url.split('/').pop().replace(/_/g, ' '),
+          label: url.split('/').pop().replace(/_/g, ' '),
           url: url,
           icon: <BookOutlined />
         }))
@@ -76,13 +89,12 @@ function App() {
         return console.error('Failed to fetch unique url ids')
       }
       setUrlData(res.data)
+      setIsLoadingApp(false)
     } catch (e) {
       return console.error(
         'Internal server error: Failed to fetch unique url ids',
         e
       )
-    } finally {
-      setIsLoadingApp(false)
     }
   }
 
@@ -133,7 +145,37 @@ function App() {
       await Promise.all(fetchTopicPromises)
 
       setDocumentsByUrl(res.data)
-      console.log('res.data with topics', res.data)
+
+      const fetchDocumentMetadata = async () => {
+        try {
+          const metadataRes = await axios.get('/api/metadata-by-url', {
+            params: {
+              url: url
+            }
+          })
+          if (metadataRes.status !== 200) {
+            return console.error('Failed to fetch document metadata')
+          }
+
+          const regex = /\[([^\]]+)\]/g
+
+          const matches = []
+          let match
+          while ((match = regex.exec(metadataRes?.data?.catchwords)) !== null) {
+            matches.push(match[1].trim())
+          }
+          setDocumentMetadata({
+            ...metadataRes.data,
+            catchwords: matches
+          })
+        } catch (e) {
+          return console.error(
+            'Internal server error: Failed to fetch document metadata'
+          )
+        }
+      }
+
+      await fetchDocumentMetadata()
     } catch (e) {
       return console.error(
         'Internal server error: Failed to fetch documents',
@@ -208,25 +250,66 @@ function App() {
       >
         <div
           style={{
-            padding: 18,
             borderRight: '1px solid rgba(5, 5, 5, 0.06)'
           }}
         >
-          <Select
-            showSearch
-            size='large'
+          <div
             style={{
-              width: '100%'
+              paddingTop: 16,
+              paddingBottom: 16,
+              display: 'flex',
+              justifyContent: collapsed ? 'center' : 'flex-end',
+              width: '80%',
+              margin: 'auto'
             }}
-            placeholder='Search Document'
-            filterOption={false}
-            optionFilterProp='children'
-            onSearch={setSearchTerm}
-            options={visibleOptions}
-            onSelect={(value, option) => {
-              selectDocument(value, option)
-            }}
-          />
+          >
+            <Button ghost type='primary' onClick={toggleCollapsed}>
+              {collapsed ? (
+                <MenuUnfoldOutlined
+                  style={{
+                    fontSize: 16
+                  }}
+                />
+              ) : (
+                <MenuFoldOutlined
+                  style={{
+                    fontSize: 16
+                  }}
+                />
+              )}
+            </Button>
+          </div>
+          {collapsed ? (
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                paddingTop: 12,
+                paddingBottom: 12
+              }}
+            >
+              <FileSearchOutlined />
+            </div>
+          ) : (
+            <Select
+              showSearch
+              size='large'
+              style={{
+                width: '80%',
+                display: 'flex',
+                margin: 'auto',
+                justifyContent: 'center'
+              }}
+              placeholder='Search Document'
+              filterOption={false}
+              optionFilterProp='children'
+              onSearch={setSearchTerm}
+              options={visibleOptions}
+              onSelect={(value, option) => {
+                selectDocument(value, option)
+              }}
+            />
+          )}
         </div>
         <div
           style={{
@@ -238,29 +321,33 @@ function App() {
             onSelect={onClick}
             onOpenChange={onOpenChange}
             style={{
-              minWidth: 256,
-              width: 256,
+              width: collapsed ? 'auto' : 256,
               overflow: 'scroll'
             }}
             selectedKeys={selectedYearCourtType}
             openKeys={openedMenuKeys}
             mode='inline'
             items={transformUrlData}
+            inlineCollapsed={collapsed}
           />
         </div>
       </div>
       <div
         className='app-body'
         style={{
-          marginLeft: '256px',
+          marginLeft: collapsed ? '80px' : '256px',
           height: '100%',
-          width: '100%'
+          width: '100%',
+          transition: '0.5s ease-out'
         }}
       >
         {isLoading ? (
           <Loading />
         ) : Object.keys(documentsByUrl).length > 0 ? (
-          <DocumentsSelection documents={documentsByUrl} />
+          <DocumentsSelection
+            documents={documentsByUrl}
+            metadata={documentMetadata}
+          />
         ) : (
           <div style={{ color: '#d3d3d3', marginTop: 64 }}>
             Select a document to get started!

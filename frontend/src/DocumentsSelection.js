@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Tag, Tooltip, Select } from 'antd'
+import { Card, Tag, Tooltip, Select, Collapse } from 'antd'
 import { DocumentView } from './DocumentView'
 
 const topicColors = {
@@ -58,7 +58,7 @@ function DocumentCard({ document, index, onSelect }) {
   )
 }
 
-export const DocumentsSelection = ({ documents }) => {
+export const DocumentsSelection = ({ documents, metadata }) => {
   const [filteredDocuments, setFilteredDocuments] = useState(documents)
   const [selectedTopics, setSelectedTopics] = useState([])
 
@@ -68,6 +68,123 @@ export const DocumentsSelection = ({ documents }) => {
   const handleSelectDocument = (index) => {
     setSelectedDocumentIndex(index)
   }
+
+  const collapseItems = [
+    {
+      key: 'metadata',
+      label: (
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            gap: 4
+          }}
+        >
+          <h3
+            style={{
+              margin: 4
+            }}
+          >
+            Case Title:
+          </h3>
+          <p
+            style={{
+              margin: 4,
+              fontSize: 16
+            }}
+          >
+            {metadata?.caseTitle}
+          </p>
+        </div>
+      ),
+      children: (
+        <>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'flex-start',
+              alignItems: 'center',
+              gap: 4
+            }}
+          >
+            <h4
+              style={{
+                margin: '4px 8px'
+              }}
+            >
+              Case ID:
+            </h4>
+            <p
+              style={{
+                margin: 4
+              }}
+            >
+              {metadata?.caseId}
+            </p>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'flex-start',
+              alignItems: 'center',
+              gap: 4
+            }}
+          >
+            <h4
+              style={{
+                margin: '4px 8px'
+              }}
+            >
+              URL:
+            </h4>
+            <a href={metadata?.url} target='_blank' rel='noreferrer'>
+              <p
+                style={{
+                  margin: 4
+                }}
+              >
+                {metadata?.url}
+              </p>
+            </a>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'flex-start',
+              alignItems: 'center',
+              gap: 4
+            }}
+          >
+            <h4
+              style={{
+                margin: '4px 8px'
+              }}
+            >
+              Catchwords:
+            </h4>
+            <p
+              style={{
+                margin: 4
+              }}
+            >
+              {metadata?.catchwords.map((catchword) => (
+                <Tag color='#108ee9'>{catchword}</Tag>
+              ))}
+            </p>
+          </div>
+        </>
+      )
+    }
+  ]
+
+  console.log('metadata', metadata)
 
   useEffect(() => {
     if (selectedDocumentIndex !== null) {
@@ -143,13 +260,22 @@ export const DocumentsSelection = ({ documents }) => {
         justifyContent: 'flex-start'
       }}
     >
+      <Collapse
+        defaultActiveKey={['metadata']}
+        bordered={false}
+        items={collapseItems}
+        style={{
+          alignItems: 'center',
+          margin: '24px 24px'
+        }}
+      />
       <div
         style={{
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          margin: '32px 24px 4px',
+          margin: '0 32px',
           gap: 24
         }}
       >
@@ -158,7 +284,9 @@ export const DocumentsSelection = ({ documents }) => {
             textAlign: 'start',
             flex: 1,
             display: 'flex',
-            width: '100%'
+            width: '100%',
+            marginTop: 12,
+            marginBottom: 12
           }}
         >
           Sections

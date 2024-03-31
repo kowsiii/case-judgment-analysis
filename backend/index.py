@@ -118,6 +118,34 @@ def get_documents():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/api/metadata-by-url', methods=['GET'])
+def get_metadata():
+    # Extract URL from query parameters
+    url_to_find = request.args.get('url')
+
+    if not url_to_find:
+        return jsonify({"error": "URL parameter is required"}), 400
+
+    csv_file_path = './legal_metadata_test.csv'
+
+    try:
+        csv.field_size_limit(sys.maxsize)
+        metadata = {} 
+        with open(csv_file_path, mode='r', encoding='utf-8') as csv_file:
+            reader = csv.DictReader(csv_file)
+            for row in reader:
+                if row['URL'] == url_to_find:
+                    metadata = {
+                        "caseId": row['Case ID'], 
+                        "url": row['URL'], 
+                        "caseTitle": row['Case Title'],
+                        "catchwords": row['Catchwords'],
+                    }
+            return jsonify(metadata), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 @app.route('/ner', methods=['POST'])
 def ner():
     text = request.json.get('text')

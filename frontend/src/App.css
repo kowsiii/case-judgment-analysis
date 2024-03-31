@@ -90,3 +90,7 @@
     opacity: 1;
   }
 }
+
+.ant-collapse-header {
+  align-items: center !important;
+}
