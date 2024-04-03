@@ -1,0 +1,67 @@
+[
+    {
+        "text": "COURT",
+        "background_color": "#FFB6C1",
+        "text_color": "#000000"
+    },
+    {
+        "text": "PETITIONER",
+        "background_color": "#FFDAB9",
+        "text_color": "#000000"
+    },
+    {
+        "text": "RESPONDENT",
+        "background_color": "#FFA07A",
+        "text_color": "#000000"
+    },
+    {
+        "text": "JUDGE",
+        "background_color": "#FFC0CB",
+        "text_color": "#000000"
+    },
+    {
+        "text": "LAWYER",
+        "background_color": "#FFDEAD",
+        "text_color": "#000000"
+    },
+    {
+        "text": "DATE",
+        "background_color": "#F0E68C",
+        "text_color": "#000000"
+    },
+    {
+        "text": "ORGANIZATION",
+        "background_color": "#FF69B4",
+        "text_color": "#000000"
+    },
+    {
+        "text": "GPE",
+        "background_color": "#20B2AA",
+        "text_color": "#000000"
+    },
+    {
+        "text": "STATUE",
+        "background_color": "#87CEFA",
+        "text_color": "#000000"
+    },
+    {
+        "text": "PRECEDENT",
+        "background_color": "#ADD8E6",
+        "text_color": "#000000"
+    },
+    {
+        "text": "CASE_NUMBER",
+        "background_color": "#B0E0E6",
+        "text_color": "#000000"
+    },
+    {
+        "text": "WITNESS",
+        "background_color": "#87CEEB",
+        "text_color": "#000000"
+    },
+    {
+        "text": "OTHER_PERSON",
+        "background_color": "#AFEEEE",
+        "text_color": "#000000"
+    }
+]

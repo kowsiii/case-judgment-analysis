@@ -57,12 +57,12 @@ const LandingPage = ({ setAppState }) => {
             transition: 'background-color 0.3s, transform 0.3s'
           }}
           onMouseOver={(e) => {
-            e.target.style.backgroundColor = '#032b70' // Change button color on hover
-            e.target.style.color = 'white' // Change text color on hover
+            e.target.style.backgroundColor = '#032b70'
+            e.target.style.color = 'white'
           }}
           onMouseOut={(e) => {
-            e.target.style.backgroundColor = 'white' // Revert button color on mouse out
-            e.target.style.color = '#032b70' // Revert text color on mouse out
+            e.target.style.backgroundColor = 'white'
+            e.target.style.color = '#032b70'
           }}
           onClick={() => {
             setAppState('main')

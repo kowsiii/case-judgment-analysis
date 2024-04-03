@@ -5,13 +5,12 @@ import sys
 import re
 import spacy
 from spacy import displacy
-from collections import OrderedDict
-import json
 
-from gensim.corpora import Dictionary
-from gensim.models import LdaModel
+# from gensim.corpora import Dictionary
+# from gensim.models import LdaModel
 
-from services import preprocess_text, summarise_text, evaluate_summary, preprocess
+# from services import preprocess_text, summarise_text, evaluate_summary, preprocess
+from services import predict_topic, get_top_words
 
 from transformers import PegasusForConditionalGeneration, PegasusTokenizer
 import torch
@@ -25,30 +24,19 @@ CORS(app)
 # NER
 ner_model_path = '../model_ner'
 nlp = spacy.load(ner_model_path)
+
+# old
 # nlp = spacy.load("en_core_web_sm")
 
-# Topic Modelling
-lda_model = LdaModel.load("./lda_model")
-dictionary = Dictionary.load("./corpus")
-topic_labels = [
-    "Legal Agreement and Court Proceedings",
-    "Audit Rights and Plaintiffs' Issues",
-    "Court Decisions and Appeal Cases",
-    "Enforcement Process and Court Decisions",
-    "Appeals and Legal Applications",
-    "Legal Proceedings and Sentencing",
-    "Plaintiffs' Claims and Court Proceedings",
-    "Rights of Defendants and Plaintiffs",
-    "Defendant Claims and Vessel Issues",
-    "Court Offences and Sentencing Issues"
-]
+# Topic Modelling - LDA
+# lda_model = LdaModel.load("./lda_model")
+# dictionary = Dictionary.load("./corpus")
 
 # Summary
 model_name = 'google/pegasus-xsum'
 torch_device = 'cuda' if torch.cuda.is_available() else 'cpu'
 tokenizer = PegasusTokenizer.from_pretrained(model_name)
 model = PegasusForConditionalGeneration.from_pretrained(model_name).to(torch_device)
-
 
 @app.route('/api/unique-url-ids', methods=['GET'])
 def get_documents_url():
@@ -179,74 +167,113 @@ def ner():
     response.headers['Content-Type'] = 'text/html'
     return response
 
-@app.route('/api/document-topic-distribution', methods=['POST'])
-def get_document_topics():
+# Using BERT-legal model
+@app.route('/api/predicted-topic', methods=['POST'])
+def get_predicted_topics():
     data = request.json
     # doc_header = data['header']
     doc_body = data['body']
+    predicted_topic = predict_topic(doc_body)
 
-    tokens = preprocess(doc_body)
-
-    # Convert tokens to BOW format
-    bow_vector = [dictionary.doc2bow(tokens)]
-
-    # Perform inference using the loaded model
-    topic_distribution = lda_model.get_document_topics(bow_vector)
-
-    topic_distributions = list(topic_distribution)  # Convert the TransformedCorpus to a list
-
-    if topic_distributions:
-        single_doc_distribution = topic_distributions[0]
-        topics_json = [{topic_labels[topic_id]: float(prob)} for topic_id, prob in single_doc_distribution]
-
-        dominant_topic_id, dominant_prob = max(single_doc_distribution, key=lambda x: x[1])
-        dominant_topic_label = topic_labels[dominant_topic_id]
-        dominant_topic = {"Dominant Topic": dominant_topic_label, "Probability": float(dominant_prob)}
-
-        response = {
-            "topics": topics_json,
-            "dominant_topic": dominant_topic
-        }
-
+    response = {
+        "predicted_topic": predicted_topic,
+    }
     return jsonify(response)
 
-@app.route('/api/summarise', methods=['POST'])
-def summarize_text():
-    # Extract text from the POST request
+
+# Approach: Replicate sentences that contain the keywords from dominant topics
+def adjust_text_based_on_topics(text, predicted_topic):
+    # Step 1: Get the document's topic distribution and top keywords for each topic
+    topic_keywords = get_top_words(predicted_topic)
+
+    # Step 2: Adjust the text by emphasizing sentences with keywords
+    adjusted_text = ""
+    for sentence in text.split('. '):  # Simplistic sentence splitting
+        sentence_keywords = [word for word in topic_keywords if word in sentence]
+        if sentence_keywords:
+            # Duplicate sentences containing keywords from dominant topics
+            adjusted_text += " " + sentence + ". " + sentence + ". "
+        else:
+            adjusted_text += " " + sentence + ". "
+    
+    return adjusted_text.strip()
+
+# uses insights gained from the BERT model to guide the summarization process.
+@app.route('/api/enhanced-summarise', methods=['POST'])
+def enhanced_summarize_text():
     data = request.json
-    src_text = data.get('text')
+    doc_body = data.get('text')
+    doc_body_length = len(doc_body.split(' '))
+    desired_summary_length = max(40, min(doc_body_length // 2, 300))  # Ensure within model's limits
+
+    predicted_topic = predict_topic(doc_body)
+
+    adjusted_text = doc_body
+
+    if predicted_topic:
+        # Adjust text or summarization approach based on topics
+        adjusted_text = adjust_text_based_on_topics(doc_body, predicted_topic)
+
+    # Prepare adjusted text for summarization model
+    batch = tokenizer(adjusted_text, truncation=True, padding='longest', max_length=512, return_tensors="pt").to(torch_device)
     
-    if not src_text:
-        return jsonify({"error": "No text provided for summarization"}), 400
-    
-    # Prepare the text for the model
-    batch = tokenizer(src_text, truncation=True, padding='longest', max_length=512, return_tensors="pt").to(torch_device)
-    
-    # Generate summary
-    summary_ids = model.generate(batch['input_ids'], attention_mask=batch['attention_mask'], max_length=150, min_length=40, length_penalty=2.0, num_beams=4, early_stopping=True)
+    # Generate summary with potentially adjusted parameters based on topics
+    summary_ids = model.generate(batch['input_ids'], attention_mask=batch['attention_mask'],  max_length=desired_summary_length, 
+        min_length=desired_summary_length // 2, length_penalty=2.0, num_beams=4, early_stopping=True)
     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     
     return jsonify({"summary": summary})
 
+# Deprecated: Topic Modeling with LDA model
+# @app.route('/api/document-topic-distribution', methods=['POST'])
+# def get_document_topics_lda():
+#     data = request.json
+#     # doc_header = data['header']
+#     doc_body = data['body']
 
-# old
-@app.route('/summarize', methods=['POST'])
-def summarize_document():
-    # Check if there is a file in the request
-    if 'file' not in request.files:
-        return jsonify({'error': 'No file part'}), 400
-    file = request.files['file']
+#     tokens = preprocess(doc_body)
 
-    # empty file without a filename.
-    if file.filename == '':
-        return jsonify({'error': 'No selected file'}), 400
+#     # Convert tokens to BOW format
+#     bow_vector = [dictionary.doc2bow(tokens)]
 
-    document = file.read().decode('utf-8')
-    preprocessed_paragraphs = preprocess_text(document)
-    summaries, generated_summary = summarise_text(preprocessed_paragraphs)
-    rouge_evaluation = evaluate_summary(generated_summary, preprocessed_paragraphs)
+#     # Perform inference using the loaded model
+#     topic_distribution = lda_model.get_document_topics(bow_vector)
 
-    return jsonify({'summary': summaries, 'evaluation': rouge_evaluation}), 200
+#     topic_distributions = list(topic_distribution)  # Convert the TransformedCorpus to a list
+
+#     if topic_distributions:
+#         single_doc_distribution = topic_distributions[0]
+#         topics_json = [{topic_labels[topic_id]: float(prob)} for topic_id, prob in single_doc_distribution]
+
+#         dominant_topic_id, dominant_prob = max(single_doc_distribution, key=lambda x: x[1])
+#         dominant_topic_label = topic_labels[dominant_topic_id]
+#         dominant_topic = {"Dominant Topic": dominant_topic_label, "Probability": float(dominant_prob)}
+
+#         response = {
+#             "topics": topics_json,
+#             "dominant_topic": dominant_topic
+#         }
+
+#     return jsonify(response)
+
+# Deprecated: Summarise using Pegasus only 
+# @app.route('/api/summarise', methods=['POST'])
+# def summarize_text():
+#     # Extract text from the POST request
+#     data = request.json
+#     src_text = data.get('text')
+    
+#     if not src_text:
+#         return jsonify({"error": "No text provided for summarization"}), 400
+    
+#     # Prepare the text for the model
+#     batch = tokenizer(src_text, truncation=True, padding='longest', max_length=512, return_tensors="pt").to(torch_device)
+    
+#     # Generate summary
+#     summary_ids = model.generate(batch['input_ids'], attention_mask=batch['attention_mask'], max_length=150, min_length=40, length_penalty=2.0, num_beams=4, early_stopping=True)
+#     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+    
+#     return jsonify({"summary": summary})
 
 if __name__ == '__main__':
     app.run(debug=True)

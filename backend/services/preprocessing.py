@@ -4,7 +4,6 @@ import string
 
 # Preprocessing function
 def preprocess(text):
-    print('text', text)
     stop_words = set(stopwords.words('english'))
     text = text.lower()  # Convert text to lowercase
     text = text.translate(str.maketrans('', '', string.punctuation))  # Remove punctuation

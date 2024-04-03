@@ -11,23 +11,8 @@ import { NERSection } from './NERSection'
 import { TopicModelSection } from './TopicModelSection'
 import { EntitiesNERSelection } from './EntitiesNERSelection'
 const { Title, Paragraph } = Typography
-const allOptionsList = [
-  'COURT',
-  'PETITIONER',
-  'RESPONDENT',
-  'JUDGE',
-  'LAWYER',
-  'DATE',
-  'ORGANIZATION',
-  'GPE',
-  'STATUE',
-  'PRECEDENT',
-  'CASE_NUMBER',
-  'WITNESS',
-  'OTHER_PERSON'
-]
 
-const defaultCheckedList = [
+const allOptionsList = [
   'COURT',
   'PETITIONER',
   'RESPONDENT',
@@ -53,7 +38,7 @@ export const DocumentView = ({
   const [selectedTab, setSelectedTab] = useState('NER')
 
   // ner entities
-  const [checkedList, setCheckedList] = useState(defaultCheckedList)
+  const [checkedList, setCheckedList] = useState(allOptionsList)
 
   const onChange = (key) => {
     setSelectedTab(key)

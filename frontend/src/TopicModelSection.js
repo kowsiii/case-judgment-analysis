@@ -1,54 +1,48 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Divider, Flex, Tag, Tooltip } from 'antd'
-import { InfoCircleOutlined } from '@ant-design/icons'
+import { Divider, Tag } from 'antd'
 import { Loading } from './Loading'
-
-const topicColors = {
-  'Legal Agreement and Court Proceedings': 'magenta',
-  "Audit Rights and Plaintiffs' Issues": 'red',
-  'Court Decisions and Appeal Cases': 'volcano',
-  'Enforcement Process and Court Decisions': 'orange',
-  'Appeals and Legal Applications': 'gold',
-  'Legal Proceedings and Sentencing': 'lime',
-  "Plaintiffs' Claims and Court Proceedings": 'green',
-  'Rights of Defendants and Plaintiffs': 'cyan',
-  'Defendant Claims and Vessel Issues': 'blue',
-  'Court Offences and Sentencing Issues': 'geekblue'
-}
+import topicColors from './assets/topicColors.json'
 
 export const TopicModelSection = ({ document }) => {
   const [isLoadingTopics, setIsLoadingTopics] = useState(false)
   const [isLoadingSummary, setIsLoadingSummary] = useState(false)
-
-  const [topicDistribution, setTopicDistribution] = useState({})
-  const [dominantTopic, setDominantTopic] = useState({})
+  const [dominantTopic, setDominantTopic] = useState(null)
   const [summary, setSummary] = useState(null)
 
   const loadTopicModel = async () => {
     try {
       setIsLoadingTopics(true)
-      // get topic distribution
-      const res = await axios.post('/api/document-topic-distribution', {
+      const res = await axios.post('/api/predicted-topic', {
         header: document.header,
         body: document.body
       })
       if (res.status !== 200) {
-        return console.error('Failed to fetch topic distribution')
+        return console.error('Failed to fetch predicted topic')
       }
 
-      const topicsCopy = [...res.data.topics]
-      topicsCopy.sort((a, b) => {
-        const aValue = Object.values(a)[0]
-        const bValue = Object.values(b)[0]
-        return bValue - aValue
-      })
+      setDominantTopic(res.data.predicted_topic)
 
-      setTopicDistribution(topicsCopy)
-      setDominantTopic(res.data.dominant_topic)
+      // Deprecated: LDA Model - topic distributions and dominant topic
+      // const res = await axios.post('/api/document-topic-distribution', {
+      //   header: document.header,
+      //   body: document.body
+      // })
+      // if (res.status !== 200) {
+      //   return console.error('Failed to fetch topic distribution')
+      // }
+      // const topicsCopy = [...res.data.topics]
+      // topicsCopy.sort((a, b) => {
+      //   const aValue = Object.values(a)[0]
+      //   const bValue = Object.values(b)[0]
+      //   return bValue - aValue
+      // })
+      // setTopicDistribution(topicsCopy)
+      // setDominantTopic(res.data.dominant_topic)
+      
     } catch (e) {
       return console.error(
-        'Internal server error: Failed to fetch topic distribution',
+        'Internal server error: Failed to fetch predicted topic',
         e
       )
     } finally {
@@ -60,7 +54,7 @@ export const TopicModelSection = ({ document }) => {
     try {
       setIsLoadingSummary(true)
 
-      const res = await axios.post('/api/summarise', {
+      const res = await axios.post('/api/enhanced-summarise', {
         text: document.body
       })
       if (res.status !== 200) {
@@ -81,9 +75,7 @@ export const TopicModelSection = ({ document }) => {
 
   return (
     <>
-      {isLoadingTopics ||
-      Object.keys(topicDistribution).length === 0 ||
-      Object.keys(dominantTopic).length === 0 ? (
+      {isLoadingTopics || !dominantTopic ? (
         <Loading />
       ) : (
         <div>
@@ -102,18 +94,21 @@ export const TopicModelSection = ({ document }) => {
                 marginBottom: 12
               }}
             >
-              Dominant Topic:
+              Predicted Topic:
             </h5>
-            <Tooltip title={dominantTopic['Probability']}>
+            {/* <Tooltip title={dominantTopic['Probability']}>
               <Tag
                 bordered={false}
                 color={topicColors[dominantTopic['Dominant Topic']]}
               >
                 {dominantTopic['Dominant Topic']}
               </Tag>
-            </Tooltip>
+            </Tooltip> */}
+            <Tag bordered={false} color={topicColors[dominantTopic]}>
+              {dominantTopic}
+            </Tag>
           </div>
-          <div
+          {/* <div
             style={{
               display: 'flex',
               flexDirection: 'row',
@@ -144,8 +139,8 @@ export const TopicModelSection = ({ document }) => {
                 )
               })}
             </Flex>
-          </div>
-          <div
+          </div> */}
+          {/* <div
             style={{
               display: 'flex',
               flexDirection: 'row',
@@ -163,7 +158,7 @@ export const TopicModelSection = ({ document }) => {
             >
               Hover tags to see probability distribution
             </span>
-          </div>
+          </div> */}
           <Divider />
         </div>
       )}

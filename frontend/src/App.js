@@ -26,6 +26,7 @@ function App() {
 
   const [urlData, setUrlData] = useState([])
   const [documentsByUrl, setDocumentsByUrl] = useState({})
+  const [distinctTopics, setDistinctTopics] = useState([])
   const [documentMetadata, setDocumentMetadata] = useState({})
   const [collapsed, setCollapsed] = useState(false)
 
@@ -107,37 +108,24 @@ function App() {
         }
       })
 
+      let distinctTopicsInDocument = new Set()
       // Prepare to fetch topic models for each document
       const fetchTopicPromises = Object.values(res.data).map(
         async (document) => {
           console.log('fetchTopicPromises')
           try {
-            const topicRes = await axios.post(
-              '/api/document-topic-distribution',
-              {
-                header: document.header,
-                body: document.body
-              }
-            )
+            const topicRes = await axios.post('/api/predicted-topic', {
+              header: document.header,
+              body: document.body
+            })
 
             if (topicRes.status === 200) {
-              const topicsCopy = [...topicRes.data.topics]
-              topicsCopy.sort((a, b) => {
-                const aValue = Object.values(a)[0]
-                const bValue = Object.values(b)[0]
-                return bValue - aValue
-              })
-
-              // Append the topics and dominant topic to the document object
-              document.topics = topicsCopy
-              document.dominantTopic = topicRes.data.dominant_topic
+              // Append predicted topic to the document object
+              document.dominantTopic = topicRes.data.predicted_topic
+              distinctTopicsInDocument.add(topicRes.data.predicted_topic)
             }
           } catch (e) {
-            console.error(
-              'Failed to fetch topic distribution for a document',
-              e
-            )
-            // Optionally handle the error more gracefully
+            console.error('Failed to fetch predicted topic for a document', e)
           }
         }
       )
@@ -145,6 +133,7 @@ function App() {
       await Promise.all(fetchTopicPromises)
 
       setDocumentsByUrl(res.data)
+      setDistinctTopics(distinctTopicsInDocument)
 
       const fetchDocumentMetadata = async () => {
         try {
@@ -347,6 +336,7 @@ function App() {
           <DocumentsSelection
             documents={documentsByUrl}
             metadata={documentMetadata}
+            distinctTopics={distinctTopics}
           />
         ) : (
           <div style={{ color: '#d3d3d3', marginTop: 64 }}>
