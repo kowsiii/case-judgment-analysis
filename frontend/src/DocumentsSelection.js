@@ -171,7 +171,8 @@ export const DocumentsSelection = ({ documents, metadata }) => {
             </h4>
             <p
               style={{
-                margin: 4
+                margin: 4,
+                textAlign: 'start'
               }}
             >
               {metadata?.catchwords.map((catchword) => (

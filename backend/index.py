@@ -16,12 +16,16 @@ from services import preprocess_text, summarise_text, evaluate_summary, preproce
 from transformers import PegasusForConditionalGeneration, PegasusTokenizer
 import torch
 
+import warnings
+warnings.filterwarnings('ignore', category=UserWarning, module='transformers')
 
 app = Flask(__name__)
 CORS(app) 
 
 # NER
-nlp = spacy.load("en_core_web_sm")
+ner_model_path = '../model_ner'
+nlp = spacy.load(ner_model_path)
+# nlp = spacy.load("en_core_web_sm")
 
 # Topic Modelling
 lda_model = LdaModel.load("./lda_model")
@@ -146,13 +150,30 @@ def get_metadata():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-@app.route('/ner', methods=['POST'])
+@app.route('/api/ner', methods=['POST'])
 def ner():
     text = request.json.get('text')
+    entityTypes = request.json.get('entitiesList')
     doc = nlp(text)
-    print('ner doc', doc)
-    
-    html = displacy.render(doc, style='ent', page=True)
+    colors = {
+        "COURT": "#FFB6C1",
+        "PETITIONER": "#FFDAB9",
+        "RESPONDENT": "#FFA07A",
+        "JUDGE": "#FFC0CB",
+        "LAWYER": "#FFDEAD",
+        "DATE": "#F0E68C",
+        "ORGANIZATION": "#FF69B4",
+        "GPE": "#20B2AA",
+        "STATUE": "#87CEFA",
+        "PRECEDENT": "#ADD8E6",
+        "CASE_NUMBER": "#B0E0E6",
+        "WITNESS": "#87CEEB",
+        "OTHER_PERSON": "#AFEEEE"
+    }
+
+    options = {"ents": entityTypes, "colors": colors}
+
+    html = displacy.render(doc, style='ent', page=True, options=options)
     # Return the HTML content
     response = make_response(html)
     response.headers['Content-Type'] = 'text/html'

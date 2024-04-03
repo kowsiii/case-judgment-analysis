@@ -9,7 +9,39 @@ import {
 } from '@ant-design/icons'
 import { NERSection } from './NERSection'
 import { TopicModelSection } from './TopicModelSection'
+import { EntitiesNERSelection } from './EntitiesNERSelection'
 const { Title, Paragraph } = Typography
+const allOptionsList = [
+  'COURT',
+  'PETITIONER',
+  'RESPONDENT',
+  'JUDGE',
+  'LAWYER',
+  'DATE',
+  'ORGANIZATION',
+  'GPE',
+  'STATUE',
+  'PRECEDENT',
+  'CASE_NUMBER',
+  'WITNESS',
+  'OTHER_PERSON'
+]
+
+const defaultCheckedList = [
+  'COURT',
+  'PETITIONER',
+  'RESPONDENT',
+  'JUDGE',
+  'LAWYER',
+  'DATE',
+  'ORGANIZATION',
+  'GPE',
+  'STATUE',
+  'PRECEDENT',
+  'CASE_NUMBER',
+  'WITNESS',
+  'OTHER_PERSON'
+]
 
 export const DocumentView = ({
   document,
@@ -19,6 +51,9 @@ export const DocumentView = ({
   selectedTopics
 }) => {
   const [selectedTab, setSelectedTab] = useState('NER')
+
+  // ner entities
+  const [checkedList, setCheckedList] = useState(defaultCheckedList)
 
   const onChange = (key) => {
     setSelectedTab(key)
@@ -44,7 +79,16 @@ export const DocumentView = ({
     {
       key: 'NER',
       label: 'Named Entity Recognition',
-      children: <NERSection text={document.body} />
+      children: (
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <EntitiesNERSelection
+            allOptionsList={allOptionsList}
+            checkedList={checkedList}
+            setCheckedList={setCheckedList}
+          />
+          <NERSection text={document.body} entitiesList={checkedList} />
+        </div>
+      )
     },
     {
       key: 'TM',
