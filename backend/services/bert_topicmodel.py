@@ -3,9 +3,12 @@ import torch
 import json
 from gensim.utils import simple_preprocess
 import joblib
+import os
+
+current_working_directory = os.getcwd()
 
 # Topic Modelling - BERT-legal
-BERT_MODEL_DIR = '/Users/jiayi.lee/SMU/Text_Mining/project/case-judgment-analysis/BERTLegal'
+BERT_MODEL_DIR = os.path.join(current_working_directory, '../BERTLegal')
 
 # Load the tokenizer and the model
 tokenizer = BertTokenizer.from_pretrained(BERT_MODEL_DIR)
