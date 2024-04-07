@@ -159,7 +159,9 @@ export const DocumentsSelection = ({ documents, metadata, distinctTopics }) => {
               }}
             >
               {metadata?.catchwords.map((catchword) => (
-                <Tag color='#108ee9'>{catchword}</Tag>
+                <Tag key={catchword} color='#108ee9'>
+                  {catchword}
+                </Tag>
               ))}
             </p>
           </div>

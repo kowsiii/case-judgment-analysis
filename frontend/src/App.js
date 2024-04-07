@@ -112,7 +112,6 @@ function App() {
       // Prepare to fetch topic models for each document
       const fetchTopicPromises = Object.values(res.data).map(
         async (document) => {
-          console.log('fetchTopicPromises')
           try {
             const topicRes = await axios.post('/api/predicted-topic', {
               header: document.header,
@@ -198,7 +197,7 @@ function App() {
     openedKeys.push(`${year}_${courtType}`)
     openedKeys.push(year)
     setOpenedMenuKeys(openedKeys)
-    setSelectedYearCourtType([option.value.split('/').pop()])
+    setSelectedYearCourtType([option.value.split('/').pop().replace(/_/g, ' ')])
     getDocuments(value)
   }
 

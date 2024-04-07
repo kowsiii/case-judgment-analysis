@@ -1,3 +1,4 @@
+# DEPRECATED -- not in use
 from gensim.utils import simple_preprocess
 from nltk.corpus import stopwords
 import string

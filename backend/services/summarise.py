@@ -48,8 +48,8 @@ def summarise_text(paragraphs):
 
 def evaluate_summary(paragraphs, summarised_paragraphs):
      # Evaluate summarisation output
-    reference_summary_str = " ".join(paragraphs)
-    generated_summary_str = " ".join(summarised_paragraphs)
+    reference_summary_str = paragraphs
+    generated_summary_str = summarised_paragraphs
     
     rouge = Rouge()
     scores = rouge.get_scores(generated_summary_str, reference_summary_str)

@@ -2,8 +2,6 @@ from transformers import BertTokenizer, BertModel
 import torch
 import json
 from gensim.utils import simple_preprocess
-import gzip, pickle
-import pickletools
 import joblib
 
 # Topic Modelling - BERT-legal

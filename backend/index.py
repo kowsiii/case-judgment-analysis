@@ -9,8 +9,7 @@ from spacy import displacy
 # from gensim.corpora import Dictionary
 # from gensim.models import LdaModel
 
-# from services import preprocess_text, summarise_text, evaluate_summary, preprocess
-from services import predict_topic, get_top_words
+from services import predict_topic, get_top_words, evaluate_summary
 
 from transformers import PegasusForConditionalGeneration, PegasusTokenizer
 import torch
@@ -222,7 +221,8 @@ def enhanced_summarize_text():
         min_length=desired_summary_length // 2, length_penalty=2.0, num_beams=4, early_stopping=True)
     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     
-    return jsonify({"summary": summary})
+    evaluation = evaluate_summary(summary, doc_body)
+    return jsonify({"summary": summary, "evaluation": evaluation})
 
 # Deprecated: Topic Modeling with LDA model
 # @app.route('/api/document-topic-distribution', methods=['POST'])
@@ -257,23 +257,27 @@ def enhanced_summarize_text():
 #     return jsonify(response)
 
 # Deprecated: Summarise using Pegasus only 
-# @app.route('/api/summarise', methods=['POST'])
-# def summarize_text():
-#     # Extract text from the POST request
-#     data = request.json
-#     src_text = data.get('text')
+@app.route('/api/summarise', methods=['POST'])
+def summarize_text():
+    # Extract text from the POST request
+    data = request.json
+    src_text = data.get('text')
+
+    src_text_length = len(src_text.split(' '))
+    desired_summary_length = max(40, min(src_text_length // 2, 300))  # Ensure within model's limits
     
-#     if not src_text:
-#         return jsonify({"error": "No text provided for summarization"}), 400
+    if not src_text:
+        return jsonify({"error": "No text provided for summarization"}), 400
     
-#     # Prepare the text for the model
-#     batch = tokenizer(src_text, truncation=True, padding='longest', max_length=512, return_tensors="pt").to(torch_device)
+    # Prepare the text for the model
+    batch = tokenizer(src_text, truncation=True, padding='longest', max_length=512, return_tensors="pt").to(torch_device)
     
-#     # Generate summary
-#     summary_ids = model.generate(batch['input_ids'], attention_mask=batch['attention_mask'], max_length=150, min_length=40, length_penalty=2.0, num_beams=4, early_stopping=True)
-#     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+    # Generate summary
+    summary_ids = model.generate(batch['input_ids'], attention_mask=batch['attention_mask'], max_length=desired_summary_length, min_length=desired_summary_length // 2, length_penalty=2.0, num_beams=4, early_stopping=True)
+    summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+    evaluation = evaluate_summary(summary, src_text)
     
-#     return jsonify({"summary": summary})
+    return jsonify({"summary": summary, "evaluation": evaluation})
 
 if __name__ == '__main__':
     app.run(debug=True)

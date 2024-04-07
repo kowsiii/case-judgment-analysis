@@ -130,9 +130,9 @@ export const DocumentView = ({
                     margin: '12px 20px'
                   }}
                 >
-                  {selectedTopics.map((topic) => {
+                  {selectedTopics.map((topic, index) => {
                     return (
-                      <Tag bordered={false} color={topic.value}>
+                      <Tag key={index} bordered={false} color={topic.value}>
                         {topic.label}
                       </Tag>
                     )

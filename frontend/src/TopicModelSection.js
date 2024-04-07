@@ -39,7 +39,6 @@ export const TopicModelSection = ({ document }) => {
       // })
       // setTopicDistribution(topicsCopy)
       // setDominantTopic(res.data.dominant_topic)
-      
     } catch (e) {
       return console.error(
         'Internal server error: Failed to fetch predicted topic',
@@ -57,6 +56,12 @@ export const TopicModelSection = ({ document }) => {
       const res = await axios.post('/api/enhanced-summarise', {
         text: document.body
       })
+
+      // used as comparison
+      const oldRes = await axios.post('/api/summarise', {
+        text: document.body
+      })
+
       if (res.status !== 200) {
         return console.error('Failed to fetch summary')
       }
