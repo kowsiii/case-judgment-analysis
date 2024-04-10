@@ -39,7 +39,7 @@ model = PegasusForConditionalGeneration.from_pretrained(model_name).to(torch_dev
 
 @app.route('/api/unique-url-ids', methods=['GET'])
 def get_documents_url():
-    csv_file_path = './sectionized_data.csv'
+    csv_file_path = '../sectionized_data.csv'
     documents_data = {}
 
     try:
@@ -82,7 +82,7 @@ def get_documents():
     if not url_to_find:
         return jsonify({"error": "URL parameter is required"}), 400
 
-    csv_file_path = './sectionized_data.csv'
+    csv_file_path = '../sectionized_data.csv'
 
     try:
         csv.field_size_limit(sys.maxsize)
@@ -103,7 +103,6 @@ def get_documents():
                 # No matches found for the URL
                 return jsonify({"error": "URL not found"}), 404
             
-            # Return all matching rows as an object of objects
             return jsonify(matching_rows), 200
 
     except Exception as e:
@@ -117,7 +116,7 @@ def get_metadata():
     if not url_to_find:
         return jsonify({"error": "URL parameter is required"}), 400
 
-    csv_file_path = './legal_metadata_test.csv'
+    csv_file_path = '../legal_metadata_test.csv'
 
     try:
         csv.field_size_limit(sys.maxsize)
