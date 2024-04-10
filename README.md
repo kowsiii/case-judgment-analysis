@@ -11,7 +11,7 @@ Add `sectionized_data.csv` and `legal_metadata_test.csv` to the root directory (
 
 ### Environment Setup
 This web application has been tested to work with Python 3.8. 
-If you encounter compatibility issues with newer versions of Python when setting up the virtual environment for the Backend Server, we recommend using Python 3.8.
+If you encounter compatibility issues with newer versions of Python when setting up the Backend Server, we recommend using Python 3.8.
 
 ##### Note for Windows users:
 Please note that tensorflow-macos in requirements.txt is specific to macOS and is not required or applicable for Windows users. Adjust your requirements.txt accordingly for cross-platform compatibility.
