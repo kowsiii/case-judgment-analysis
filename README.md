@@ -5,8 +5,6 @@ Clone the project repository to your local machine: `git clone https://github.co
 
 Navigate to the project directory: `cd case-judgment-analysis`
 
-Add `sectionized_data.csv` and `legal_metadata_test.csv` to the root directory (case-judgement-analysis)
-
 ## Running the Web Application
 
 ### Environment Setup
