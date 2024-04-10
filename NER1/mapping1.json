@@ -1,0 +1,17 @@
+{
+    "LAWYER": "LAWYER",
+    "COURT": "COURT",
+    "JUDGE": "JUDGE",
+    "PETITIONER": "PETITIONER",
+    "RESPONDENT": "RESPONDENT",
+    "CASE_NUMBER": "CASE_NUMBER",
+    "WITNESS": "WITNESS",
+    "PRECEDENT": "PRECEDENT",
+    "STATUTE": "STATUTE",
+    "OTHER_PERSON": "OTHER_PERSON",
+    "DATE": "DATE",
+    "ORG": "ORGANIZATION",
+    "GPE": "GPE"
+
+}
+ 

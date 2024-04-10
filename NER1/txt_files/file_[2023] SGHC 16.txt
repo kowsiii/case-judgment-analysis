@@ -1,0 +1,76 @@
+
+
+IN THE GENERAL DIVISION OF THE HIGH COURT OF THE REPUBLIC OF SINGAPORE
+[2023] SGHC 16
+
+Originating Summons No 553 of 2021 (Registrar's Appeal No 315 of 2022)
+Between
+The Star Pty Ltd
+... Applicant
+And
+Guoxing Cui
+... Respondent
+GROUNDS OF DECISION
+
+[Conflict Of Laws -- Foreign judgments -- Recognition -- Judgment given in foreign court on gambling debt -- Whether Singapore courts precluded from recognising foreign judgment on grounds of public policy -- Section 5(2) Civil Law Act (Cap 43, 1999 Rev Ed) -- Section 3(2)(f) Reciprocal Enforcement of Commonwealth Judgments Act (Cap 264, 1985 Rev Ed)]
+[Courts and Jurisdiction -- Court judgments -- Binding force -- Stare decisis -- Earlier decision of Court of Appeal regarded by subsequent Court of Appeal as incorrect in obiter dicta -- Whether High Court bound by earlier decision of Court of Appeal]
+The Star Pty Ltd
+v
+Guoxing Cui
+[2023] SGHC 16
+
+General Division of the High Court -- Originating Summons No 553 of 2021 (Registrar's Appeal No 315 of 2022)
+Chan Seng Onn SJ
+19 December 2022
+20 January 2023
+Chan Seng Onn SJ:
+Introduction
+
+1 This was not the first time the court has had to consider the question of whether foreign judgments based upon gambling debts may be registered under the Reciprocal Enforcement of Commonwealth Judgments Act (Cap 264, 1985 Rev Ed) ("RECJA"). In Liao Eng Kiat v Burswood Nominees Ltd [2004] 4 SLR(R) 690 ("Burswood Nominees"), the Court of Appeal held that section 3(2)(f) of RECJA read together with section 5(2) of the Civil Law Act (Cap 43, 1999 Rev Ed) ("CLA") did not preclude registration of such foreign judgments. In The Star Entertainment QLD Ltd v Yong Khong Yoong Mark [2022] 4 SLR 976 ("The Star Entertainment"), the High Court considered itself bound by the authority of Burswood to recognise a similar foreign judgment, notwithstanding obiter dicta by the Court of Appeal in Poh Soon Kiat v Desert Palace Inc [2010] 1 SLR 1119 ("Desert Palace") suggesting that Burswood had been wrongly decided.
+2 The present matter likewise concerned an application to register a foreign judgment based upon a gambling debt. As a result of his gambling activities at an Australian casino owned by The Star Pty Ltd ("the applicant"), Mr. Guoxing Cui ("the respondent") had incurred debts which formed the basis of an Australian judgment which the applicant subsequently obtained against him ("the judgment"). When the applicant sought to have the judgment registered in Singapore, the respondent challenged its registration and sought to have it set aside on the basis of section 3(1) and 3(2) of the RECJA.
+3 After considering the parties' submissions, I too found myself bound by Burswood to dismiss the respondent's appeal, and so declined to set aside the registration of the judgment. The respondent appealed, and I now give my reasons.
+The parties
+
+4 The applicant operates a casino known as "The Star Sydney", which was licensed in New South Wales under the Casino Control Act 1992 (NSW) by the Casino, Liquor and Gaming Control Authority of New South Wales.
+5 The respondent was a patron of The Star Sydney, who as a result of his gaming activities there incurred the debts which formed the basis of the judgment.
+Procedural history
+
+6 On 12 February 2021, the applicant obtained judgment against the respondent for a sum of $6,186,314.72 Australian Dollars from the Supreme Court of New South Wales. The applicant subsequently filed an application to register the judgment in Singapore, which was granted on 8 June 2021.
+7 On 16 June 2022, the respondent filed an application to set aside registration of the judgment. This application was heard by the Assistant Registrar ("the AR") on 14 October 2022, who declined to set aside the registration. I then heard the respondent's appeal against the AR's decision.
+The respondent's submissions
+
+8 The respondent argued that the registration of the judgment ought to be set aside pursuant to Order 67 Rule 9(3) of the Rules of Court (Cap 322, R 5, 2014 Rev Ed) ("ROC 2014"), which states:
+(3) Where the Court hearing an application to set aside the registration of a judgment registered under the first Act is satisfied that the judgment falls within any of the cases in which a judgment may not be ordered to be registered under section 3(2) of that Act or that it is not just or convenient that the judgment should be enforced in Singapore or that there is some other sufficient reason for setting aside the registration, it may order the registration of the judgment to be set aside on such terms as it thinks fit. [emphasis added]
+9 As he relied on both the section 3(2) and the "not just or convenient" grounds as bases upon which to set aside the recognition of the judgment, I briefly lay out his arguments in respect of each.
+Section 3(2) of the RECJA
+
+10 Section 3(2)(f) of the RECJA provides that no foreign judgment shall be ordered to be registered if:
+(f) the judgment was in respect of some cause of action which for reasons of public policy or for some other similar reason could not have been entertained by the registering court.
+11 Where foreign judgments based on gambling debts are concerned, the relevant public policy is that captured in section 5(2) of the CLA, which provides that:
+(2) No action shall be brought or maintained in the court for recovering any sum of money or valuable thing alleged to be won upon any wager or which has been deposited in the hands of any person to abide the event on which any wager has been made.
+12 In short, as section 5(2) of the CLA precludes the court from entertaining any action brought to recover a debt arising out of gambling, section 3(2)(f) of the RECJA would in turn preclude the registration of any foreign judgment based on such a debt.
+13 Additionally, Burswood's holding that section 3(2)(f) of the RECJA did not preclude recognition of foreign judgments based on gambling debts should not be followed. The subsequent decision of Desert Palace had commented that Burswood was "unsound and should be reviewed". Burswood's imposition of a "higher threshold" of public policy which must be met for registration of a foreign judgment to be refused was inconsistent with the plain wording of section 3(2)(f) of the RECJA. Even if it was not, the statutory public policy as articulated in section 5(2) of the CLA should be considered "more fundamental" than common law public policy, and should be sufficient to meet any higher threshold necessary for registration to be refused or set aside.
+"Not just or convenient" under Order 67 Rule 9(3) of the ROC
+
+14 The respondent also relied on the phrase "not just or convenient" for enforcement as a ground for setting aside under Order 67 Rule 9(3) of the ROC 2014. The opposite phrase "just and convenient" for enforcement and ordering of registration is used in section 3(1) of the RECJA:
+3.--(1) Where a judgment has been obtained in a superior court of the United Kingdom of Great Britain and Northern Ireland the judgment creditor may apply to the General Division of the High Court at any time within 12 months after the date of the judgment, or such longer period as may be allowed by the General Division of the High Court, to have the judgment registered in the General Division of the High Court, and on any such application the General Division of the High Court may, if in all the circumstances of the case it thinks it is just and convenient that the judgment should be enforced in Singapore, and subject to this section, order the judgment to be registered accordingly. [emphasis added]
+15 As section 5(2) of the CLA clearly articulates a policy prohibiting the recovery of gambling debts, allowing enforcement of the judgment would create a "backdoor" for casinos to enforce such debts. It would create an "unprincipled" distinction between situations in which creditors directly bring claims for foreign gambling debts in the Singaporean courts, which the courts are bound to reject by the Court of Appeal decision of Star City Pty Ltd (formerly known as Sydney Harbour Casino Pty Ltd) v Tan Hong Woon [2002] 1 SLR(R) 306, and those in which a creditor seeks recognition of a foreign judgment based on the same gambling debt, which must be recognised as per Burswood. The fact that Burswood was wrongly decided would mean that following it would subject the respondent to an erroneous application of the law. In view of these reasons, recognising the judgment would visit significant injustice and inconvenience upon the respondent.
+16 Crucially, the court is not bound by Burswood to reject such an argument. Burswood was decided on the basis that section 3(2)(f) of RECJA did not preclude the registration of a foreign gambling debt. Counsel in Burswood made no argument on the "not just or convenient" ground, and Burswood had merely observed that section 3(1) of the RECJA was "an apt provision in resolving the case", and found on the facts that the defendant there had failed to make out that ground.
+Analysis
+
+17 I found that I remained bound by the authority of Burswood to reject the respondent's submissions, in respect of both section 3(2)(f) and section 3(1) of the RECJA.
+Section 3(2) of the RECJA
+
+18 Burswood's holding that section 3(2)(f) of the RECJA read with section 5(2) of the CLA does not preclude registration of foreign judgments based on gambling debts remains binding precedent under the doctrine of stare decisis. As noted by The Star Entertainment at [15], Desert Palace was concerned with the registration of a foreign judgment not under RECJA but at common law. Its observations that Burswood was "unsound", had "no legal basis" to impose a higher public policy threshold into section 3(2)(f) of the RECJA, and should have been decided differently, were therefore all ultimately obiter. I also echo The Star Entertainment's observation at [15], that Desert Palace, in commenting that Burswood "should be reviewed if a similar issue were to come before this court in the future" (at [114]), made clear that it was not overruling Burswood. Like the court in The Star Entertainment, I was therefore bound to reject the respondent's attempt to set aside the registration of the judgment on the basis of section 3(2)(f) of the RECJA.
+"Just and convenient" under s 3(1) of the RECJA
+
+19 It is clear from the wording of section 3(1) of the RECJA that the court only has discretion to register a foreign judgment if it thinks it "just and convenient" that the judgment should be enforced in Singapore. Thus, while Burswood was largely concerned with section 3(2)(f) of the RECJA, it also had regard to s 3(1) of the RECJA and made the following finding on whether it would not be just and convenient to register the judgment with which it was concerned (at [47]):
+Thus far, the focus of this judgment has been on the public policy exception laid down in s 3(2)(f) of the RECJA. However, we also think it apt to mention another provision of the RECJA which was neglected by counsel for both parties but which we found relevant to the resolution of this case - s 3(1) of the RECJA. Whilst s 3(2) of the RECJA lays down various restrictions on the court's power to order the registration of foreign judgments, s 3(1) of the RECJA gives the court the general discretion to order the registration of a foreign judgment if "in all the circumstances of the case [the court] thinks it is just and convenient that the judgment should be enforced in Singapore". In our assessment, Liao had failed signally in his attempt to show that it was not just and convenient for us to register the Australian judgment. [emphasis in original]
+20 This inquiry was one to which the court in Burswood would have had to apply its mind before finding that the judgment with which it was concerned should be registered, and so forms part of its ratio. Given that it did so find despite clearly being cognisant of the public policy against gambling captured in section 5(2) of the CLA, it was not open to me to find that the very same public policy rendered it not just or convenient to enforce and hence register the judgment for the purposes of its enforcement, which was similar to if not legally indistinguishable from those whose recognition was at issue in Burswood and The Star Entertainment. To have held otherwise would be to read the "not just or convenient" ground as license for the High Court to freely depart from the binding authority of the Court of Appeal, whenever it might feel that the equities of the instant case warrant doing so.
+Conclusion
+
+21 For the reasons above, I found myself bound by the authority of Burswood to find that neither section 3(2)(f) nor section 3(1) barred the registration of a judgment based on a foreign gambling debt. Being so bound, I dismissed the respondent's appeal, and declined to set aside the registration of the judgment under the RECJA.
+Chan Seng Onn
+Senior Judge
+Lee Ping, Tan Wei Sze and Cristel Chong (Shook Lin & Bok LLP) for the appellant;
+Yogarajah Yoga Sharmini and Shawn Tien (Haridass Ho & Partners) for the respondent.

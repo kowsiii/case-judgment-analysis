@@ -1,0 +1,294 @@
+ 
+District Court Appeal No 9 of 2023
+Between
+WNW
+... Appellant
+And
+WNX
+... Respondent
+GROUNDS OF DECISION
+[Family Law - Matrimonial assets - Division] 
+General Division of the High Court (Family Division) -- District Court Appeal No 9 of 2023
+Andrew Ang SJ
+20 September 2023
+27 December 2023 
+1 The matter in HCF/DCA 9/2023 was an appeal against a decision of the Family Court in relation to the division of matrimonial assets. 
+2 The appellant, [WNW], is the husband ("the Husband"). At the time of the Ancillary Matters hearing on 4 November 2022 ("the AM Hearing"), the Husband held in his sole name a 3-room Housing and Development Board flat situated at Chai Chee Road ("the Matrimonial Flat"). The main question in this appeal is whether 100% of the value of the Matrimonial Flat is to be taken into account in the division of matrimonial assets or, as the Husband maintains, only 50% thereof as allegedly agreed between the parties previously.
+3 The respondent, [WNX], is the wife ("the Wife").
+4 The parties were married in 1989. They have one daughter from the marriage, namely, [B], who is 30 years old this year. 
+5 The Wife commenced divorce proceedings on 19 November 2019 in FC/D 5623/2019. Interim Judgment by consent was granted on 9 September 2020 ("the IJ") on the ground that parties had lived apart for a continuous period of at least four years immediately preceding the divorce proceedings.
+6 At the time of the dissolution of the marriage, the parties had been married for almost 31 years.
+7 To provide the context for the present appeal, I reproduce in the table below the chronology of events, which was helpfully set out in the Appellant's Case (with necessary modifications): 
+1982
+The Matrimonial Flat was purchased in 1982 for $40,500.00 in the joint names of the Husband and his mother.
+Over the years, the Husband paid $51,198.53 (from CPF, including accrued interest). The Husband's mother paid for the balance of the property.
+Renovations of the Matrimonial Flat were done by the Husband and paid for by him. This was not disputed.
+1989
+Parties registered their marriage.
+Parties moved in with the Husband's mother into the Matrimonial Flat.
+1993
+[B] was born.
+1994
+Parties took to sleeping in different rooms owing to constant arguments and ceased all physical and emotional intimacy and development.
+Parties led separate households and kept communications to a minimum, ie, only when necessary, regarding the care, education and health of [B].
+19 November 2019
+Divorce proceedings commenced.
+9 September 2020
+IJ entered by consent.
+4 January 2022
+The Husband's 1st Affidavit of Assets and Means ("AOM") was filed.
+12 January 2022
+The Wife's 1st AOM was filed.
+Despite earlier inability to do so, parties finally agreed at the Status Conference that the Husband's share of the Matrimonial Flat was 50%, with the other 50% belonging to the Husband's Mother ("the Agreement").
+20 May 2022
+The Husband's 2nd AOM was filed.
+23 June 2022
+The Wife's 2nd AOM was filed.
+September 2022
+The Husband's Mother passed away.
+As the Matrimonial Flat was held under a joint tenancy, the Husband became the sole owner of the Matrimonial Flat by virtue of the right of survivorship.
+4 November 2022
+The AM Hearing was held and judgment was reserved.
+30 January 2023
+The AM judgment was delivered.
+8 As noted in the table above, the Matrimonial Flat was purchased in 1982 by the Husband and his mother and held jointly by both. This occurred seven years before the marriage. There is no outstanding mortgage on the flat.
+Parties agreed that the value of the Matrimonial Flat was $305,000.00.
+On 12 January 2022, parties agreed at the Status Conference that the Husband's share of the Matrimonial Flat was 50%, with the other 50% belonging to the Husband's mother. The Husband's mother passed away sometime in September 2022, two years after the IJ.
+By the operation of the rule of survivorship in joint tenancies, the Husband became the sole owner of the Matrimonial Flat. 
+9 Following the grant of the IJ, the AM Hearing was heard by the District Judge ("the DJ") on 4 November 2022. The sole outstanding issue concerned the division of matrimonial assets. In particular, the main question was whether the Husband's interest in the Matrimonial Flat to be taken into account in the division of matrimonial assets was 100% of the value of the flat or 50% as previously agreed between the parties at the Status Conference. 
+10 The DJ found that the Husband's assets in total amounted to $340,750.31, inclusive of 100% of the Matrimonial Flat. The DJ's findings are summarised as follows: 
+1
+Matrimonial Flat
+$152,500.00
+(ie, 50% share pursuant to the Agreement)
+$305,000.00
+(ie, 100% share)
+2
+POSB eSavings Account
+$3.27
+$3.27
+3
+Husband's CPF Accounts
+$35,747.04
+$35,747.04
+4
+Outstanding motor loan
+-$54,000.00
+NIL 
+$188,250.31
+$340,750.31
+11 The DJ found that the starting point in determining what lies in the pool of matrimonial assets is the date of IJ on 9 September 2020. Crucially, in relation to the Matrimonial Flat, which is the subject of the present appeal, the DJ noted that while the transmission of the Matrimonial Flat wholly to the Husband by way of survivorship occurred two years after the date of IJ, the Matrimonial Flat remained the same asset and 100% of its value ought to be added into the pool of matrimonial assets.
+The DJ found that the present case is distinguishable from one where the Husband had acquired a new asset by his own effort or had obtained a gift or inheritance.
+In the circumstances of the case, the DJ held that it was fair to treat the asset as the same single asset with its value to the Husband having increased at the time of the AM hearing.
+12 With regard to the Wife's assets, the DJ found that her total assets amounted to $396,953.40. The breakdown is reproduced as follows: 
+1
+POSB Savings Account
+$20,000.00
+$20,000.00
+2
+UOB Account
+$6,000.00
+$6,000.00
+OCBC Account
+$6,200.00
+$6,200.00
+3
+CPF Accounts
+$364,753.40
+$364,753.40
+4
+UOB Life Maxi Harvest Policy
+$13,942.74
+NIL
+(On the basis that the purported UOB Life Maxi Harvest Policy was not proven by affidavit or that it had not been in existence at the time the Wife filed her 1st AOM) 
+$410,896.14
+$396,953.40 
+13 The DJ noted that the parties' direct contributions to the acquisition of matrimonial assets were not in dispute. The ratio of direct contributions was accordingly found to be 46.2:53.8: 
+Bank accounts
+$3.27
+$32,200.00
+CPF accounts
+$35,747.04
+$364,753.40
+Matrimonial Flat
+$305,000.00
+NIL
+Total direct contributions
+$340,750.31
+(46.2%)
+$396,953.40
+(53.8%)
+14 In relation to the indirect contributions, the DJ applied a "broad-brush approach" to find that the ratio of the parties' indirect contributions amounted to 50:50, taking into account the fact that the parties had been living separate lives for most of their marriage and only interacted when it came to their child, [B].
+15 In arriving at the average ratio, the DJ considered that equal weight could not be given to the direct and indirect contributions of the parties. The DJ considered relevant the fact that the parties had been separated for 26 out of 31 years of their marriage such that a ratio of 80:20 was warranted in favour of direct contributions.
+16 Based on the above, the DJ arrived at the final division of matrimonial assets. This is reproduced in the table below, with the calculations shown in brackets. 
+Direct contribution ratio
+(A)
+36.96%
+(= 46.2% x 0.80)
+43.04%
+(=53.8% x 0.80)
+Indirect contribution ratio
+(B)
+10%
+(=50% x 0.20)
+10%
+(=50% x 0.20)
+Average ratio (A+B)
+46.96%
+53.04%
+Share of total asset pool ($737,703.71)
+$346,425.66
+$391,278.04
+17 As the results above closely reflected the total value of assets that the parties already had in their respective names, the DJ ordered the parties to retain whatever assets they were holding. In particular, the DJ made the following orders dated 30 January 2023 ("the DJ's Orders"):
+a. That the Plaintiff shall retain all the rights and interest in Blk 60 Chai Chee Road #01902 Singapore 460060.
+b. Both parties are to retain whatever assets they each already have in their own names.
+c. By consent, the Defendant is not entitled to maintenance from the Plaintiff.
+d. By consent, there is no order as to costs.
+e. Parties at liberty to apply.
+18 The Husband appealed against all of the DJ's Orders, except for the DJ's pronouncement on maintenance and costs by consent. 
+19 As clarified by counsel for the Husband, the only asset that is the subject of the Husband's appeal is the Matrimonial Flat. The Husband does not dispute the DJ's findings on the values attributed to the other assets in the pool. The Husband submitted that the DJ erred in taking into account the full 100% value of the Matrimonial Flat in the division of matrimonial assets despite the parties having agreed on 50% under the Agreement at the Status Conference.
+20 The Husband also submitted that the DJ erred in applying an 80:20 ratio in favour of direct contributions against indirect contributions instead of assigning equal weightage to them. 
+21 The Wife submitted that the DJ did not err in including 100% of the share of the Matrimonial Flat in the matrimonial pool. She submitted that the DJ was not bound by the Agreement reached between the parties during the Status Conference that the Husband's share of the Matrimonial Flat was 50% and that the other 50% belonged to the Husband's Mother. The Wife also submitted that the acquisition by the Husband of the additional 50% of the Matrimonial Flat by way of survivorship was not an inheritance within the exception provided under s 112(10) of the Women's Charter (Cap 353, 2009 Rev Ed) ("WC").
+22 Furthermore, the Wife also submitted that her CPF monies ought to be excluded from the matrimonial pool as they had been acquired after the separation of the parties in 1994.
+I note that the Wife did not pursue this point at the hearing before me. In any event, this submission was untenable given that the Wife's CPF monies are a quintessential matrimonial asset acquired during the parties' marriage. 
+23 Based on the parties' cases, this appeal turns on two issues:
+(a) Whether 50% or 100% of the Matrimonial Flat should be added to the pool of matrimonial assets.
+(b) Whether the DJ erred in his assessment of the proper weight to be given to the direct and indirect contributions of the parties to the marriage. 
+24 According to the Husband, the DJ erred in including 100% of the Matrimonial Flat in the matrimonial asset pool for division. There were four main pillars to the Husband's argument advanced in his written submissions:
+(a) Firstly, the additional 50% acquired by the Husband upon his mother's demise under the rule of survivorship is an inheritance that is excluded from the ambit of a "matrimonial asset" under s 112(10) of the WC ("Point (a)").
+(b) Secondly, the Matrimonial Flat is not a matrimonial asset liable to be divided as it is a pre-marital property purchased by the Husband and his mother in 1983, seven years before the marriage in 1989 ("Point (b)").
+(c) Thirdly, the Agreement for 50% of the Matrimonial Flat to be included in the matrimonial pool is enforceable and binding on the parties ("Point (c)").
+(d) Fourthly, the starting point for determining the matrimonial asset pool is the date of IJ, ie, 9 September 2020.
+There are no circumstances here warranting a departure from this date. There is no justification to include the additional 50% later acquired by the Husband upon his mother's death which occurred after the date of IJ because post-IJ, "parties no longer intend[ed] to participate in the joint accumulation of matrimonial assets" ("Point (d)").
+25 Having reviewed the points above, I rejected the Husband's submission that they disclosed any error on the part of the DJ regarding the Matrimonial Flat which warranted appellate intervention. 
+26 First, addressing Point (a), I rejected the husband's argument that his additional interest acquired upon the demise of his mother should be excluded from the matrimonial pool because it was acquired by way of an inheritance. A "matrimonial asset" is defined under s 112(10) of the WC as follows:
+(10) In this section, "matrimonial asset" means --
+(a) any asset acquired before the marriage by one party or both parties to the marriage --
+(i) ordinarily used or enjoyed by both parties or one or more of their children while the parties are residing together for shelter or transportation or for household, education, recreational, social or aesthetic purposes; or
+(ii) which has been substantially improved during the marriage by the other party or by both parties to the marriage; and
+(b) any other asset of any nature acquired during the marriage by one party or both parties to the marriage,
+but does not include any asset (not being a matrimonial home) that has been acquired by one party at any time by gift or inheritance and that has not been substantially improved during the marriage by the other party or by both parties to the marriage.
+[emphasis added]
+27 From the above, it can be seen that while it is true that s 112(10) of the WC provides an exception for assets acquired by way of inheritance, this exception does not apply where matrimonial homes are concerned. Indeed, matrimonial homes are subject to the court's power of division upon the dissolution of marriage, even if they were acquired before the marriage: UJF v UJG [2019] 3 SLR 178 at [79]. The Matrimonial Flat was a matrimonial home. The Husband does not dispute that he and the Wife resided in the Matrimonial Flat since 1989, with the wife leaving the flat only in 2018.
+It was also in the flat that their daughter, [B], was raised.
+According to the notes of evidence for the AM hearing, the DJ appeared to have proceeded on the basis that the Matrimonial Flat was a matrimonial home, as seen in his labelling of the Matrimonial Flat as the "Matrimonial Home".
+I see no reason to differ.
+28 For the same reasons as stated above, I dismissed Point (b). The argument that the Matrimonial Flat had been acquired before the marriage between the parties as a pre-marital property is irrelevant once the flat assumed the status of a matrimonial home. 
+29 I turn then to Points (c) and (d). To my mind, both these points can be dealt with together because they essentially hinge on the operation of the Agreement. More specifically, underpinning these points lies the assumption that the Agreement is enforceable and binding on the parties. In making these points, the Husband appears to be going one step further to argue that the Agreement, having contractual force between the parties, requires this Court to give effect to it. Stated in this manner, it became plain to me that the validity of the Husband's points hinges on an affirmative answer to this question: "In exercising its powers to divide matrimonial assets, is this Court bound by the Agreement entered into between parties as to the proper division of their matrimonial assets?" In my view, the answer must be "no".
+30 Section 112(2)(e) of the WC provides that the court must consider "any agreement between the parties with respect to the ownership and division of the matrimonial assets made in contemplation of divorce" in deciding what are the just and equitable proportions of their division between the spouses. To my mind, there was little doubt that parties had come to an agreement falling within the meaning of s 112(2)(e) of the WC, as it was an agreement entered into for the purpose of dividing the assets in the context of a specifically contemplated divorce: see Lian Hwee Choo Phebe v Tan Seng Ong [2013] 3 SLR 1162 at [21(a)].
+31 However, parties' agreement is but one factor in the overall assessment. It remains critical for the court to consider all the circumstances of the case when determining the proper weight to be given to such an agreement: see UKA v UKB [2018] 4 SLR 779 at [24]; TQ v TR and another appeal [2009] 2 SLR(R) 961 at [75] and [77]. After all, the court's power to divide matrimonial assets originates not from the parties' agreement, but from statute, in particular, s 112(1) of the WC. The authors of Halsbury's Laws of Singapore vol 11 (LexisNexis, 2020 Reissue) ("Halsbury's") at para 130.830 states as follows:
+While there is no doubt that an agreement between the spouses with regard to the division of property is valid and one made in contemplation of divorce may even be encouraged given that the Family Court seeks the harmonious resolution of disputes between spouses, this is just one factor towards the just and equitable proportions of division of the matrimonial assets.
+32 From the above, the overarching inquiry, therefore, is whether the DJ's decision to include 100% of the Matrimonial Flat into the matrimonial pool was "just and equitable" as stipulated by s 112(1) of the WC.
+33 In both his written and oral submissions, counsel for the Husband sought to impress upon me the relevance of the Court of Appeal's holding in TND v TNC and another appeal [2017] SGCA 34 ("TND") at [24] that "[w]here, with the benefit of legal advice, the parties agree on a particular date as the date of valuation of the matrimonial assets, a judge should generally adopt that agreed date unless there is good reason not to do so." Counsel for the Husband reasoned that if parties' agreement as to a particular date of valuation should generally be adopted, then logically, the parties' Agreement on the inclusion of the notional amount of 50% of the Matrimonial Flat to the matrimonial asset pool ought also to be adopted.
+34 I did not consider TND to be helpful. In the first place, TND has no direct application in the present case because the parties did not, in fact, reach any agreement on the date of valuation of matrimonial assets. Counsel's extension of the holding in TND so that an agreement as to the identification of a matrimonial asset ought generally to be adopted by this Court does not advance the Husband's case much. While I accept that an agreement can feature significantly in the Court's assessment of the proper division of matrimonial assets, it must be borne in mind that this is only where such an agreement amounts to a comprehensive financial arrangement. Halsbury's at para 130.830 states as follows:
+It bears noting first than an agreement is of significance only where it conforms to at least two characteristics; that is it intended as a comprehensive financial arrangement so that there are no longer any residual financial matters and of the division of matrimonial assets, it achieves a "just and equitable" division of the spouses' matrimonial assets. Where the agreement is of such character, the courts have demonstrated that they have the option of either dismissing the application to leave the parties to their agreement or alternatively the court can incorporate the terms of the agreement into a consent order of division of matrimonial assets. ...
+[emphasis added]
+35 The Agreement can in no way be said to be a "comprehensive financial arrangement" as to the issue of the division of matrimonial assets. Indeed, as counsel for the Wife pointed out at the hearing, even on the Husband's own case, the Agreement of 50% had been arrived at merely to represent the Husband's "notional" share in the Matrimonial Flat. This was necessary for the purpose of allowing the division of matrimonial assets to proceed in the face of an impasse arising from the fact that the Husband's mother had an interest in the Matrimonial Flat as a joint tenant. This is the true nature and purpose of the Agreement which I found to be critical in my decision to reject the Husband's submission that this Court should uphold the Agreement. In other words, I considered that the background as to how the parties had entered into the Agreement meant that it was just and equitable in the circumstances not to confine the division of the Matrimonial Flat to only the 50% provided under the Agreement.
+36 It is perhaps appropriate for me at this juncture to set out the background to the Agreement. This background was undisputed by the parties.
+As early as 8 December 2020, counsel for the parties had been specifically directed to commence a separate legal action in the General Division of the High Court to resolve the Husband's mother's share in the Matrimonial Flat. However, the parties attempted to resolve the matter through mediation without recourse to a separate legal action. Parties could not reach a resolution at mediation. That being the case, at the Status Conference on 24 November 2021, parties were again directed to resort to separate legal action. To move the case forward, the Family Court requested counsel to take instructions from the parties on their position on the Husband's mother's share of the Matrimonial Flat. Pursuant to this, parties agreed that a 50% share should be "notionally" included in the matrimonial asset pool for division. Having entered into the Agreement, parties no longer needed to take up separate legal action to determine the Husband's mother's share in the Matrimonial Flat, allowing the Family Court to give directions for parties to proceed with filing their affidavits of assets and means in support of their respective claims.
+37 From the background above, it must be emphasised that the Agreement was merely entered into for the sake of representing the Husband's "notional" share in the Matrimonial Flat for the purpose of facilitating the division of matrimonial assets. It would have come as a surprise to the Wife that in entering into the Agreement she had thereby waived her rights under s 112(10) of the WC to lay claim to her proper share of the Matrimonial Flat.
+38 I am fortified in my conclusion by the point made by counsel for the Husband at the hearing that the Agreement was not conditioned on the mortality of the mother. Parties had simply not directed their minds to what would happen to the Husband's entitlement to the Matrimonial Flat should the Husband's mother pass away after the Agreement was entered into. This was not a term of the Agreement. To therefore visit upon the Wife the consequence that she is entitled to share in only 50% of the Matrimonial Flat notwithstanding the fact that the Husband had since become entitled to 100% of the property by way of survivorship would, in my view, not be just and equitable. Furthermore, the alternative of including 50% of the Matrimonial Flat would not have resulted in a just and equitable division of the matrimonial assets. I illustrate this by way of a comparison between two scenarios as to how the matrimonial assets would be divided where the proportion of the Matrimonial Flat to be included was 100% and 50% respectively. I shall call these scenarios the "First" and "Second Scenario", respectively.
+39 Dealing with the First Scenario, the DJ's decision to include 100% of the Matrimonial Flat into the matrimonial pool had achieved a final division where the Husband was entitled to $346,425.66 and the Wife, $391,278.04, out of the total asset pool of $737,703.71. As the DJ noted, this result reflected closely the total value of the assets that each party possessed in their own names. The DJ accordingly directed that both parties retain the assets held in their own names, with the Husband retaining all rights and interests in the Matrimonial Flat.
+40 Moving on to the Second Scenario, where we assume that only 50% of the Matrimonial Flat is to be included in the matrimonial pool. Under this scenario, as can be seen from the calculations in the table below, the Husband's direct contributions would be $188,250.31. The Wife's direct contributions would stand at $396,953.40. 
+Bank accounts
+$3.27
+$32,200.00
+CPF accounts
+$35,747.04
+$364,753.40
+Husband's flat
+$152,500.00
+(Instead of $305,000.00 which represents 100% of the Matrimonial Flat)
+-
+Total direct contributions (=$585,203.71) (100%)
+$188,250.31
+(32.2%)
+$396,953.40
+(67.8%)
+41 Based on these figures and assuming for present purposes that the weightage between direct and indirect contributions remains at 80:20 as determined by the DJ, the Husband would retain all his assets while the Wife would be required under the Second Scenario to transfer a sum of $21,018.53 to the Husband. This can be seen from the calculations in the following table: 
+Direct Contributions
+(32.2/100) x 0.8 = 25.76%
+(67.8/100) x 0.8 = 54.24%
+Indirect Contributions
+(50/100) x 0.2 = 10%
+(50/100) x 0.2 = 10%
+Result
+25.76% + 10% = 35.76%
+54.24% + 10% = 64.24%
+Share of the total asset pool
+($585,203.71)
+35.76% x $585,203.71=
+$209,268.847
+64.24% x $585,203.71=
+$375,934.863
+Parties' net entitlement after deducting assets in their sole name
+$209,268.847 - $188,250.31 =
+$ 21,018.53
+$375,934.863 -
+$396,953.40 =
+$-21,018.53
+42 The outcome under Second Scenario would become even worse for the Wife if the weightage of 80:20 between the parties' indirect and direct contributions were to be changed to 50:50 as advanced by the Husband in this appeal. For reasons I will explain in greater detail below at [44]-[47], I settled on a ratio of 2:1 as a more appropriate weightage of the parties' respective direct and indirect contributions. Applying this ratio of 2:1, the inequity which would befall the Wife under the Second Scenario is still evident. As can be seen from the table of calculations below, under the Second Scenario, the Wife would then be expected to pay $34,907.37 to the Husband. With her bank account balance standing at $32,200, this would deprive the Wife of her entire savings. On the other hand, the Husband would get to retain all his assets (including the Matrimonial Flat) and receive an additional $34,907.37 to boot. There was no doubt in my mind that the First Scenario results in a more just and equitable outcome for both parties. This was the way the DJ had approached the division of the Matrimonial Flat, and I did not find that he was wrong in doing so. 
+Direct Contributions
+(32.2/100) x (2/3) = 21.47%
+(67.8/100) x (2/3) = 45.2%
+Indirect Contributions
+(50/100) x (1/3) =
+16.67%
+(50/100) x (1/3) =
+16.67%
+Result
+21.47% + 16.67% = 38.13%
+45.2% + 16.67% = 61.87%
+Share of the total asset pool
+($585,203.71)
+38.14% x $585,203.71=
+$223,157.68
+61.87% x $585,203.71=
+$362,046.03
+Parties' net entitlement after deducting assets in their sole name
+$223,157.68 -
+$188,250.31 =
+$ 34,907.37
+$362,046.03 -
+$396,953.40 =
+-$34,907.37
+43 Addressing the Husband's Point (d) more specifically, I found no fault with the DJ's reasoning that the Matrimonial Flat had already been earmarked for inclusion in the pool of matrimonial assets as of the date of IJ on 9 September 2020.
+In other words, the Husband's interest as a joint tenant of the Matrimonial Flat had been identified for inclusion in the matrimonial pool. The hallmark of a joint tenancy is the right of survivorship: Chan Lung Kien v Chan Shwe Ching [2018] 4 SLR 208 at [20]. As the Court of Appeal stated in Shafeeg bin Salim Talib and another v Fatimah bte Abud bin Talib and others [2010] 2 SLR 1123 at [39] and [40], each of the two joint tenants possesses a concurrent interest in the whole such that on the death of one of the joint tenants, the sole interest in the whole remains to the survivor; it is not the case that the deceased joint tenant's interest passes to the survivor. The fact that the Husband's mother had passed away only after the date of IJ did not change the conclusion that the Husband's joint interest (and his interest as sole owner of the Matrimonial Flat upon his mother's death) had already been earmarked for inclusion in the matrimonial pool as of the date of IJ. The enjoyment of this right of a joint tenant to the right by survivorship is of course subject to there being no issue of severance arising in respect of the property (see Chan Lung Kien v Chan Shwe Ching [2018] 2 SLR 84 at [18]) or other disputes between the joint tenants as to their respective shares in the property. However, no such issue of severance or other disputes had been raised between the Husband and his mother. In these circumstances, I saw no reason to disturb the DJ's decision to include 100% of the Matrimonial Flat in the matrimonial pool. 
+44 Notwithstanding the long marriage in this present case, the DJ appeared to have considered it critical that there was a long period of separation between the parties ("26 years out of 31 years of their marriage") and that they had only contributed to the family in matters related to the child.
+He therefore arrived at the ratio of 80:20 in favour of direct contributions.
+45 On appeal, counsel for the Husband submitted that the DJ erred in applying an 80:20 weightage in favour of direct contributions against indirect contributions instead of assigning equal weight to both. Counsel for the Husband stressed that while the parties had separated in 1994, they continued to reside in the Matrimonial Flat until the Wife left in 2018. Furthermore, parties both contributed to the upbringing of their daughter, [B] throughout this period. [B] had turned 21 in 2014 before the Wife left the Matrimonial Home. These must be considered in calibrating the weightage between the direct and indirect contributions of the parties.
+46 I agreed with counsel for the Husband that the longer the marriage, the greater the indirect contributions tend to feature. Indeed, this was one important factor stated by the Court of Appeal in ANJ v ANK [2015] 4 SLR 1043 at [27] in determining the appropriate weight of the parties' direct contributions as against their indirect contributions. It appeared that the DJ had given short shrift to the Husband's argument in favour of equal weightage. Due regard must be given to the parties' contribution to [B]'s care. Based on [B]'s affidavit, it was clear that both the Husband and the Wife had contributed to [B]'s care and upbringing. I note in passing that while [B]'s evidence appeared to suggest that the Wife had been less involved in the care of [B] than the Husband,
+the Husband accepted on appeal, as he did in his submissions to the DJ,
+that both parties had made equal indirect contributions to the marriage.
+He did not contend that he should be accorded greater credit for his indirect contributions compared to the Wife.
+Therefore, the question of whether the DJ had rightly determined the parties' indirect contributions did not arise in this appeal. The question here was only whether the DJ had erred in applying an 80:20 weightage in favour of direct contributions against indirect contributions.
+47 As counsel for the Husband accepted in both his written submissions
+and in the hearing before me, the court's power to divide matrimonial assets is to be exercised in broad strokes with regard to what is just and equitable in the circumstances. From the points considered above, it appeared that the DJ assigned too little weightage to indirect contributions. Put another way, it cannot be said that the weight given to direct contributions ought to be four times that given to the parties' indirect contributions. It was, after all, a relatively long marriage, notwithstanding the parties' early separation. Furthermore, the parties' indirect contribution to the care of [B] for a lengthy period of 20 years was undoubtedly substantial. However, I did not agree with counsel for the Husband that a 50:50 weightage was therefore appropriate. I was of the view that a ratio of 2:1 in favour of direct contributions was more appropriate.
+48 This meant that the parties' entitlements to the matrimonial assets were to be varied as follows: 
+Direct Contributions
+(46.2/100) x 2/3 = 30.8%
+(53.8/100) x 2/3 = 35.87%
+Indirect Contributions
+(50/100) x 1/3 = 16.66%
+(50/100) x 1/3 = 16.66%
+Result
+30.8% + 16.67% = 47.46%
+35.87% + 16.67% = 52.54%
+Share of the total asset pool
+($737,703.71)
+47.46% x $737,703.71 =
+$350,114.18
+52.54% x $737,703.71 =
+$387,589.53
+Parties' net entitlement after deducting assets in their sole name
+$350,114.18 -$340,750.31 =
+$9,363.87
+$387,589.53 - $396,953.40 =
+-9,363.87
+49 Therefore, the Wife needed to pay $9,363.87 to the Husband. 
+50 For the reasons above, I dismissed the Husband's appeal against 100% of the value of the Matrimonial Flat being included in the pool of matrimonial assets but allowed the appeal partially on the issue of the proper weightage of the direct and indirect contributions of the parties. In the circumstances, I ordered that the parties bear their own costs.
+51 Upon request by the counsel for the Wife, I allowed the payment of $9,363.87 to be made in six monthly instalments. The first instalment of $1,863.87 was ordered to be paid on 15 October 2023 and the remaining five instalments of $1,500 each to be paid on the 15th day of the months following thereafter.
+Andrew Ang
+Senior Judge
+Han Hean Juan and Lu Zhao Bo Yu (Han & Lu Law Chambers LLP) for the appellant;
+Han Wah Teng (CTLC Law Corporation) for the respondent.
