@@ -5,14 +5,12 @@ import sys
 import re
 import spacy
 from spacy import displacy
+from services import predict_topic, get_top_words, evaluate_summary
+from transformers import PegasusForConditionalGeneration, PegasusTokenizer
+import torch
 
 # from gensim.corpora import Dictionary
 # from gensim.models import LdaModel
-
-from services import predict_topic, get_top_words, evaluate_summary
-
-from transformers import PegasusForConditionalGeneration, PegasusTokenizer
-import torch
 
 import warnings
 warnings.filterwarnings('ignore', category=UserWarning, module='transformers')
@@ -24,12 +22,9 @@ CORS(app)
 ner_model_path = '../model_ner'
 nlp = spacy.load(ner_model_path)
 
-# old
-# nlp = spacy.load("en_core_web_sm")
-
-# Topic Modelling - LDA
-# lda_model = LdaModel.load("./lda_model")
-# dictionary = Dictionary.load("./corpus")
+# Topic Modelling - LDA (deprecated)
+# lda_model = LdaModel.load("../lda_model")
+# dictionary = Dictionary.load("../corpus")
 
 # Summary
 model_name = 'google/pegasus-xsum'
@@ -54,12 +49,10 @@ def get_documents_url():
                     match = re.search(r'https://www.elitigation.sg/gd/s/(\d{4})_([A-Z]+)_(\d+)', url)
                     if match:
                         year, court_type, case_number = match.groups()
-                        # Initialize nested dictionaries as needed
                         if year not in documents_data:
                             documents_data[year] = {}
                         if court_type not in documents_data[year]:
                             documents_data[year][court_type] = {}
-                        # Store URL using case number as key to ensure uniqueness
                         documents_data[year][court_type][int(case_number)] = url
 
         # Sort by case number and convert dictionaries to lists of URLs
@@ -76,7 +69,6 @@ def get_documents_url():
 
 @app.route('/api/documents-by-url', methods=['GET'])
 def get_documents():
-    # Extract URL from query parameters
     url_to_find = request.args.get('url')
 
     if not url_to_find:
@@ -100,7 +92,6 @@ def get_documents():
                         index += 1 
             
             if not matching_rows:
-                # No matches found for the URL
                 return jsonify({"error": "URL not found"}), 404
             
             return jsonify(matching_rows), 200
@@ -110,7 +101,6 @@ def get_documents():
 
 @app.route('/api/metadata-by-url', methods=['GET'])
 def get_metadata():
-    # Extract URL from query parameters
     url_to_find = request.args.get('url')
 
     if not url_to_find:
@@ -160,7 +150,6 @@ def ner():
     options = {"ents": entityTypes, "colors": colors}
 
     html = displacy.render(doc, style='ent', page=True, options=options)
-    # Return the HTML content
     response = make_response(html)
     response.headers['Content-Type'] = 'text/html'
     return response
@@ -181,12 +170,12 @@ def get_predicted_topics():
 
 # Approach: Replicate sentences that contain the keywords from dominant topics
 def adjust_text_based_on_topics(text, predicted_topic):
-    # Step 1: Get the document's topic distribution and top keywords for each topic
+    # Get the document's topic distribution and top keywords for each topic
     topic_keywords = get_top_words(predicted_topic)
 
-    # Step 2: Adjust the text by emphasizing sentences with keywords
+    # Adjust the text by emphasizing sentences with keywords
     adjusted_text = ""
-    for sentence in text.split('. '):  # Simplistic sentence splitting
+    for sentence in text.split('. '):
         sentence_keywords = [word for word in topic_keywords if word in sentence]
         if sentence_keywords:
             # Duplicate sentences containing keywords from dominant topics
@@ -202,17 +191,15 @@ def enhanced_summarize_text():
     data = request.json
     doc_body = data.get('text')
     doc_body_length = len(doc_body.split(' '))
-    desired_summary_length = max(40, min(doc_body_length // 2, 300))  # Ensure within model's limits
+    desired_summary_length = max(40, min(doc_body_length // 2, 300))
 
     predicted_topic = predict_topic(doc_body)
 
     adjusted_text = doc_body
 
     if predicted_topic:
-        # Adjust text or summarization approach based on topics
         adjusted_text = adjust_text_based_on_topics(doc_body, predicted_topic)
 
-    # Prepare adjusted text for summarization model
     batch = tokenizer(adjusted_text, truncation=True, padding='longest', max_length=512, return_tensors="pt").to(torch_device)
     
     # Generate summary with potentially adjusted parameters based on topics
@@ -221,6 +208,29 @@ def enhanced_summarize_text():
     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     
     evaluation = evaluate_summary(summary, doc_body)
+    return jsonify({"summary": summary, "evaluation": evaluation})
+
+# Summarise using Pegasus only 
+@app.route('/api/summarise', methods=['POST'])
+def summarize_text():
+    # Extract text from the POST request
+    data = request.json
+    src_text = data.get('text')
+
+    src_text_length = len(src_text.split(' '))
+    desired_summary_length = max(40, min(src_text_length // 2, 300))  # Ensure within model's limits
+    
+    if not src_text:
+        return jsonify({"error": "No text provided for summarization"}), 400
+    
+    # Prepare the text for the model
+    batch = tokenizer(src_text, truncation=True, padding='longest', max_length=512, return_tensors="pt").to(torch_device)
+    
+    # Generate summary
+    summary_ids = model.generate(batch['input_ids'], attention_mask=batch['attention_mask'], max_length=desired_summary_length, min_length=desired_summary_length // 2, length_penalty=2.0, num_beams=4, early_stopping=True)
+    summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
+    evaluation = evaluate_summary(summary, src_text)
+    
     return jsonify({"summary": summary, "evaluation": evaluation})
 
 # Deprecated: Topic Modeling with LDA model
@@ -254,29 +264,5 @@ def enhanced_summarize_text():
 #         }
 
 #     return jsonify(response)
-
-# Deprecated: Summarise using Pegasus only 
-@app.route('/api/summarise', methods=['POST'])
-def summarize_text():
-    # Extract text from the POST request
-    data = request.json
-    src_text = data.get('text')
-
-    src_text_length = len(src_text.split(' '))
-    desired_summary_length = max(40, min(src_text_length // 2, 300))  # Ensure within model's limits
-    
-    if not src_text:
-        return jsonify({"error": "No text provided for summarization"}), 400
-    
-    # Prepare the text for the model
-    batch = tokenizer(src_text, truncation=True, padding='longest', max_length=512, return_tensors="pt").to(torch_device)
-    
-    # Generate summary
-    summary_ids = model.generate(batch['input_ids'], attention_mask=batch['attention_mask'], max_length=desired_summary_length, min_length=desired_summary_length // 2, length_penalty=2.0, num_beams=4, early_stopping=True)
-    summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
-    evaluation = evaluate_summary(summary, src_text)
-    
-    return jsonify({"summary": summary, "evaluation": evaluation})
-
 if __name__ == '__main__':
     app.run(debug=True)

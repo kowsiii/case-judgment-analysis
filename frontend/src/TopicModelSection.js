@@ -39,6 +39,7 @@ export const TopicModelSection = ({ document }) => {
       // })
       // setTopicDistribution(topicsCopy)
       // setDominantTopic(res.data.dominant_topic)
+      
     } catch (e) {
       return console.error(
         'Internal server error: Failed to fetch predicted topic',
@@ -54,11 +55,6 @@ export const TopicModelSection = ({ document }) => {
       setIsLoadingSummary(true)
 
       const res = await axios.post('/api/enhanced-summarise', {
-        text: document.body
-      })
-
-      // used as comparison
-      const oldRes = await axios.post('/api/summarise', {
         text: document.body
       })
 
@@ -101,69 +97,10 @@ export const TopicModelSection = ({ document }) => {
             >
               Predicted Topic:
             </h5>
-            {/* <Tooltip title={dominantTopic['Probability']}>
-              <Tag
-                bordered={false}
-                color={topicColors[dominantTopic['Dominant Topic']]}
-              >
-                {dominantTopic['Dominant Topic']}
-              </Tag>
-            </Tooltip> */}
             <Tag bordered={false} color={topicColors[dominantTopic]}>
               {dominantTopic}
             </Tag>
           </div>
-          {/* <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'flex-start',
-              alignItems: 'center',
-              gap: 8
-            }}
-          >
-            <h5
-              style={{
-                marginTop: 24,
-                marginBottom: 24
-              }}
-            >
-              Topics:
-            </h5>
-            <Flex gap='4px 0' wrap='wrap'>
-              {topicDistribution.map((topic, index) => {
-                return (
-                  <Tooltip title={Object.values(topic)[0]} key={index}>
-                    <Tag
-                      bordered={false}
-                      color={topicColors[Object.keys(topic)[0]]}
-                    >
-                      {Object.keys(topic)[0]}
-                    </Tag>
-                  </Tooltip>
-                )
-              })}
-            </Flex>
-          </div> */}
-          {/* <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'flex-start',
-              alignItems: 'center',
-              gap: 8
-            }}
-          >
-            <InfoCircleOutlined style={{ color: '#d3d3d3', fontSize: 12 }} />
-            <span
-              style={{
-                fontSize: 12,
-                opacity: 0.5
-              }}
-            >
-              Hover tags to see probability distribution
-            </span>
-          </div> */}
           <Divider />
         </div>
       )}

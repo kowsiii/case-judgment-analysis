@@ -8,3 +8,6 @@ torchvision
 tensorflow
 spacy
 sentencepiece
+joblib
+rouge
+flask-cors

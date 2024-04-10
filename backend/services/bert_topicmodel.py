@@ -27,8 +27,8 @@ kmeans = joblib.load(f"{BERT_MODEL_DIR}/kmeans_model.pkl")
 
 # Function to preprocess the text (similar to what was done during training)
 def preprocess(text):
-    text = text.lower()  # Convert text to lowercase
-    tokens = simple_preprocess(text, deacc=True)  # Tokenize and remove accents
+    text = text.lower()
+    tokens = simple_preprocess(text, deacc=True)
     return tokens
 
 # Function to predict the topic label for a new document
@@ -42,7 +42,7 @@ def predict_topic(new_document):
     # Compute BERT embeddings for the document
     with torch.no_grad():
         outputs = model(encoded_doc)
-        pooled_output = outputs[1].numpy()  # Take the pooled output
+        pooled_output = outputs[1].numpy()
 
     # Use KMeans model to predict the topic label
     topic_label = kmeans.predict(pooled_output)[0]
@@ -58,19 +58,11 @@ def get_top_words(topic, n=10):
 
     Parameters:
     - topic (str): The topic for which to retrieve the top words.
-    - topics_data (dict): The dictionary containing topics and their words with probabilities.
     - n (int): Number of top words to retrieve. Defaults to 10.
-
-    Returns:
-    - list: A list of the top n words for the specified topic.
     """
-    # Check if the topic exists in the topics data
     if topic in topics_data:
-        # Extract the dictionary for the given topic
         topic_dict = topics_data[topic]
-        # Sort the words in the topic by their probability, descending
         top_words = sorted(topic_dict.items(), key=lambda x: x[1], reverse=True)[:n]
-        # Extract just the words, ignoring their probabilities
         top_words_only = [word for word, prob in top_words]
         return top_words_only
     else:

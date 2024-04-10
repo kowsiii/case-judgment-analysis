@@ -1,53 +1,11 @@
+# NOT IN USE: initial exploration for summarizaton
+# Only using rouge evaluation
+
 from transformers import pipeline
 from rouge import Rouge
 
-# Initialize the summarization pipeline
-# summarizer = pipeline("summarization", model="facebook/bart-large-cnn") # this is bad..
-summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
-
-min_word_count = 50
-
-def preprocess_text(text):
-    # Split text into paragraphs based on two or more newlines
-    sections = text.split("\n\n")
-    sections = [section.strip() for section in sections if section.strip()]
-    sections = [section.replace('\xa0', ' ') for section in sections]
-    # Normalize whitespace and strip spaces for each paragraph
-    sections = [" ".join(section.replace("\t", " ").split()) for section in sections]
-    return sections
-
-def summarise_text(paragraphs):
-    summaries = [] # contains all: original text, summarized text, and error text (if any)
-    generated_summary = [] # only contain summarized text
-
-    for i in range(0, len(paragraphs)):
-        paragraph = paragraphs[i]
-        word_count = len(paragraph.split())
-        if word_count < min_word_count: 
-            summaries.append({
-                'original_text': paragraph
-            })
-        else:
-            try:
-                # input_length = len(paragraph.split())
-                # max_length = max(30, int(input_length * 0.75))  # 75% of input length
-                summary = summarizer(paragraph, min_length=30, do_sample=False) 
-                summaries.append({
-                    'original_text': paragraphs[i], 
-                    'summarised_text': summary[0]['summary_text']
-                })
-                generated_summary.append(summary[0]['summary_text'])
-            except Exception as e:
-                print(f"Error processing index {i}: {e}")
-                summaries.append({
-                    'original_text': paragraph,
-                    'error': str(e)
-                })
-    return summaries, generated_summary
-
-
+# Evaluate summarisation output
 def evaluate_summary(paragraphs, summarised_paragraphs):
-     # Evaluate summarisation output
     reference_summary_str = paragraphs
     generated_summary_str = summarised_paragraphs
     
@@ -77,3 +35,46 @@ def evaluate_summary(paragraphs, summarised_paragraphs):
     }
 
     return evaluation
+
+# summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+# summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+
+# min_word_count = 50
+
+# def preprocess_text(text):
+#     # Split text into paragraphs based on two or more newlines
+#     sections = text.split("\n\n")
+#     sections = [section.strip() for section in sections if section.strip()]
+#     sections = [section.replace('\xa0', ' ') for section in sections]
+#     sections = [" ".join(section.replace("\t", " ").split()) for section in sections]
+#     return sections
+
+# def summarise_text(paragraphs):
+#     summaries = []
+#     generated_summary = []
+
+#     for i in range(0, len(paragraphs)):
+#         paragraph = paragraphs[i]
+#         word_count = len(paragraph.split())
+#         if word_count < min_word_count: 
+#             summaries.append({
+#                 'original_text': paragraph
+#             })
+#         else:
+#             try:
+#                 # input_length = len(paragraph.split())
+#                 # max_length = max(30, int(input_length * 0.75))  # 75% of input length
+#                 summary = summarizer(paragraph, min_length=30, do_sample=False) 
+#                 summaries.append({
+#                     'original_text': paragraphs[i], 
+#                     'summarised_text': summary[0]['summary_text']
+#                 })
+#                 generated_summary.append(summary[0]['summary_text'])
+#             except Exception as e:
+#                 print(f"Error processing index {i}: {e}")
+#                 summaries.append({
+#                     'original_text': paragraph,
+#                     'error': str(e)
+#                 })
+#     return summaries, generated_summary
+
