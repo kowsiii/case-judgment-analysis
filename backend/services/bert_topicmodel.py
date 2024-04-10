@@ -8,7 +8,8 @@ import os
 current_working_directory = os.getcwd()
 
 # Topic Modelling - BERT-legal
-BERT_MODEL_DIR = os.path.join(current_working_directory, '../BERTLegal')
+BERT_MODEL_DIR = os.path.join(current_working_directory, '../TopicModelling - BERTLegal/legal_bert_model')
+BERT_MODEL_JSONFILES_DIR = os.path.join(current_working_directory, '../TopicModelling - BERTLegal')
 
 # Load the tokenizer and the model
 tokenizer = BertTokenizer.from_pretrained(BERT_MODEL_DIR)
@@ -19,10 +20,10 @@ optimal_num_topics=45
 with open(f"{BERT_MODEL_DIR}/topic_labels.json", "r") as file:
     topic_labels = json.load(file)
 
-with open(f"{BERT_MODEL_DIR}/words_distribution_with_topics.json", "r") as data_file:
+with open(f"{BERT_MODEL_JSONFILES_DIR}/words_distribution_with_topics.json", "r") as data_file:
     topics_data = json.load(data_file)
 
-kmeans = joblib.load(f"{BERT_MODEL_DIR}/kmeans_model.pkl")
+kmeans = joblib.load(f"{BERT_MODEL_JSONFILES_DIR}/kmeans_model.pkl")
 
 
 # Function to preprocess the text (similar to what was done during training)
