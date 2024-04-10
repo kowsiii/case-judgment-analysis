@@ -1,0 +1,69 @@
+{
+  "Topics": [
+    {
+      "Topic": "High Court Judgments and Appeals",
+      "Most Frequent COURT Entities": {
+        "Siglap Court": 3,
+        "Supreme Court": 3,
+        "Singapore Courts": 3
+      }
+    },
+    {
+      "Topic": "Legal Parties and Applications",
+      "Most Frequent COURT Entities": {
+        "KLHC": 12
+      }
+    },
+    {
+      "Topic": "Defendant Evidence and Legal Claims",
+      "Most Frequent COURT Entities": {
+        "IAC": 4
+      }
+    },
+    {
+      "Topic": "Court Evidence and Defendant Cases",
+      "Most Frequent COURT Entities": {
+        "IAC": 4,
+        "Supreme Court of Singapore": 4
+      }
+    },
+    {
+      "Topic": "Defendant Charges and Legal Applications",
+      "Most Frequent COURT Entities": {
+        "IAC": 2,
+        "Paris Commercial Court": 2,
+        "RCA": 2
+      }
+    },
+    {
+      "Topic": "Appeals and Defendant Claims",
+      "Most Frequent COURT Entities": {
+        "JVA": 8
+      }
+    },
+    {
+      "Topic": "Legal Applications and Arbitration",
+      "Most Frequent COURT Entities": {
+        "IAC": 4
+      }
+    },
+    {
+      "Topic": "Legal Rights and Court Issues",
+      "Most Frequent COURT Entities": {
+        "LA": 3
+      }
+    },
+    {
+      "Topic": "Court Agreements and Plaintiff Claims",
+      "Most Frequent COURT Entities": {
+        "DT": 4
+      }
+    },
+    {
+      "Topic": "Court Decisions and Company Matters",
+      "Most Frequent COURT Entities": {
+        "IJ": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "Topics": [
+    {
+      "Topic": "Case Analysis and Legal Strategies",
+      "Most Frequent COURT Entities": {
+        "Supreme Court": 102
+      }
+    },
+    {
+      "Topic": "Legal Procedures and Criminal Cases",
+      "Most Frequent COURT Entities": {
+        "Supreme Court": 104
+      }
+    },
+    {
+      "Topic": "Judicial Decision-Making and Legal Parties",
+      "Most Frequent COURT Entities": {
+        "Supreme Court": 74
+      }
+    },
+    {
+      "Topic": "Legal Outcomes and Accusations",
+      "Most Frequent COURT Entities": {
+        "Supreme Court": 86
+      }
+    },
+    {
+      "Topic": "Legal Evidence and Case Outcomes",
+      "Most Frequent COURT Entities": {
+        "Supreme Court": 79
+      }
+    },
+    {
+      "Topic": "Evidence and Judicial Considerations",
+      "Most Frequent COURT Entities": {
+        "Supreme Court": 72
+      }
+    },
+    {
+      "Topic": "Appellate Court Focus",
+      "Most Frequent COURT Entities": {
+        "Supreme Court": 45
+      }
+    },
+    {
+      "Topic": "Costs and Parties in Appeal",
+      "Most Frequent COURT Entities": {
+        "Supreme Court": 53
+      }
+    },
+    {
+      "Topic": "Evidence and Appeal in Legal Proceedings",
+      "Most Frequent COURT Entities": {
+        "Supreme Court": 50
+      }
+    },
+    {
+      "Topic": "First Instance Legal Decisions",
+      "Most Frequent COURT Entities": {
+        "Syariah Court": 63
+      }
+    }
+  ]
+}
