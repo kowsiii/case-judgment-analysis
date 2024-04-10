@@ -1,0 +1,762 @@
+{
+  "Topics": [
+    {
+      "Topic": "High Court Judgments and Appeals",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Dodds v Dodds",
+            4
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Yeo Alvin",
+            2
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Chan",
+            5
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Liberty Engineering Group Pte Ltd",
+            3
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            65
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Eugene",
+            70
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 73B",
+            21
+          ]
+        ],
+        "ORG": [
+          [
+            "LPG",
+            66
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "TNK",
+            4
+          ]
+        ],
+        "WITNESS": [
+          [
+            "TNK",
+            2
+          ]
+        ],
+        "COURT": [
+          [
+            "Siglap Court",
+            3
+          ]
+        ],
+        "STATUTE": [
+          [
+            "IRDA",
+            35
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Legal Parties and Applications",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Mercator & Noordstar NV v Velstra Pte Ltd",
+            2
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Tay\"",
+            2
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Fox",
+            2
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Credit Suisse AG",
+            4
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            19
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Peh",
+            48
+          ]
+        ],
+        "PROVISION": [
+          [
+            "Suit 267",
+            11
+          ]
+        ],
+        "ORG": [
+          [
+            "LPG",
+            93
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Hyflux Ltd",
+            2
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Ramalingam",
+            8
+          ]
+        ],
+        "COURT": [
+          [
+            "KLHC",
+            12
+          ]
+        ],
+        "STATUTE": [
+          [
+            "SOPA",
+            24
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Defendant Evidence and Legal Claims",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Oro Negro Drilling Pte Ltd and others v Integradora de Servicios Petroleros Oro Negro SAPI de CV and others",
+            2
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Song Yihang",
+            1
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Choo Han Teck",
+            3
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "PayPal Pte Ltd",
+            1
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            32
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Murjani",
+            25
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 78(1)(a)",
+            6
+          ]
+        ],
+        "ORG": [
+          [
+            "GP Global",
+            25
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "D.N.G FZE",
+            1
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Malek",
+            2
+          ]
+        ],
+        "COURT": [
+          [
+            "IAC",
+            4
+          ]
+        ],
+        "STATUTE": [
+          [
+            "IRDA",
+            13
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Court Evidence and Defendant Cases",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "CIFG Special Assets Capital I Ltd (formerly known as Diamond Kendall Ltd) v Polimet Pte Ltd and others [2016] 1 SLR 1382 at [75]",
+            1
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Lim\"",
+            1
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Rajah",
+            3
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Lim Ing Haan",
+            1
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            26
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Manoj",
+            79
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 92",
+            18
+          ]
+        ],
+        "ORG": [
+          [
+            "LPG",
+            21
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Narayanan Sreenivasan",
+            1
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Parno",
+            4
+          ]
+        ],
+        "COURT": [
+          [
+            "IAC",
+            4
+          ]
+        ],
+        "STATUTE": [
+          [
+            "SAA",
+            14
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Defendant Charges and Legal Applications",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Rubin and another v Eurofinance SA and others [2011] 2 WLR 121",
+            1
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Nikhil Daniel Angappan",
+            1
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Chan",
+            6
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Renslade",
+            2
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            19
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Budhrani",
+            36
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 73B",
+            12
+          ]
+        ],
+        "ORG": [
+          [
+            "LPQ",
+            25
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Madam Wong Moy",
+            1
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Sia",
+            10
+          ]
+        ],
+        "COURT": [
+          [
+            "IAC",
+            2
+          ]
+        ],
+        "STATUTE": [
+          [
+            "CPC",
+            9
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Appeals and Defendant Claims",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Teo Wai Cheong v Credit Industriel et Commercial and another appeal [2013] 3 SLR 573",
+            1
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Ng Cheah Siew Shelin",
+            1
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Williams",
+            2
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Prudential Assurance Company Singapore (Pte) Ltd",
+            1
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            25
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Lim",
+            40
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 91(3)(d)",
+            23
+          ]
+        ],
+        "ORG": [
+          [
+            "Frankel Motor",
+            18
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Yeo Kee Siah",
+            1
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Ho",
+            1
+          ]
+        ],
+        "COURT": [
+          [
+            "JVA",
+            8
+          ]
+        ],
+        "STATUTE": [
+          [
+            "IRDA",
+            34
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Legal Applications and Arbitration",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Brett LJ in Jones v The Monte Video Gas Company (1880) 5 QBD 556 at 558",
+            1
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Foo Soon Yien",
+            1
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Choo Han Teck",
+            4
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Bank of China",
+            1
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            18
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Tjandra",
+            39
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 511",
+            9
+          ]
+        ],
+        "ORG": [
+          [
+            "LSH",
+            24
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "DBS Autosave account",
+            1
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Cheng",
+            3
+          ]
+        ],
+        "COURT": [
+          [
+            "IAC",
+            4
+          ]
+        ],
+        "STATUTE": [
+          [
+            "ETA",
+            14
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Legal Rights and Court Issues",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Suntech Power Investment Pte Ltd v Power Solar System Co Ltd (in liquidation) [2019] 2 SLR 564 (\"Suntech",
+            1
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Kannan Ramesh",
+            2
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Neptun",
+            2
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            23
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Budhrani",
+            50
+          ]
+        ],
+        "PROVISION": [
+          [
+            "AD 122",
+            7
+          ]
+        ],
+        "ORG": [
+          [
+            "INTL FCStone",
+            17
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Munshi",
+            2
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Ho",
+            4
+          ]
+        ],
+        "COURT": [
+          [
+            "LA",
+            3
+          ]
+        ],
+        "STATUTE": [
+          [
+            "SAA",
+            18
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Court Agreements and Plaintiff Claims",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Yeo Su Lan (alias Yang Shulan) v Hong Thomas and others [2023] SGHC 44",
+            1
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Ian Brownlie",
+            1
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Chong",
+            2
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Ng Yau Yee Theresa",
+            1
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            9
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Mdm Tan",
+            43
+          ]
+        ],
+        "PROVISION": [
+          [
+            "SUM 346",
+            14
+          ]
+        ],
+        "ORG": [
+          [
+            "LPG",
+            17
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Victory",
+            1
+          ]
+        ],
+        "COURT": [
+          [
+            "DT",
+            4
+          ]
+        ],
+        "STATUTE": [
+          [
+            "IRDA",
+            11
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Court Decisions and Company Matters",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Mendel See (HC)",
+            5
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Manoj and",
+            2
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Pang Khang Chau",
+            2
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Arokiasamy Steven Joseph",
+            1
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            14
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Sianto",
+            53
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 116",
+            9
+          ]
+        ],
+        "ORG": [
+          [
+            "BCS",
+            48
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Staghorn Singapore",
+            1
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Ho",
+            1
+          ]
+        ],
+        "COURT": [
+          [
+            "IJ",
+            2
+          ]
+        ],
+        "STATUTE": [
+          [
+            "RCA",
+            10
+          ]
+        ]
+      }
+    }
+  ]
+}

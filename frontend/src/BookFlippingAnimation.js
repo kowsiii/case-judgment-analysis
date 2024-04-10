@@ -1,6 +1,6 @@
 import React from 'react'
 import Lottie from 'react-lottie'
-import bookFlipAnimationData from './assets/bookLoading.json' // Adjust the path as necessary
+import bookFlipAnimationData from './assets/bookLoading.json'
 
 export const BookFlippingAnimation = ({ height, width }) => {
   const defaultOptions = {

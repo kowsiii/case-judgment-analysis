@@ -1,0 +1,774 @@
+{
+  "Topics": [
+    {
+      "Topic": "Case Analysis and Legal Strategies",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Ladd v Marshall",
+            30
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Davinder Singh",
+            15
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Judith Prakash",
+            90
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Government of Singapore",
+            8
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            3212
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Tan",
+            1270
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 18(2)",
+            115
+          ]
+        ],
+        "ORG": [
+          [
+            "Parliament",
+            360
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Goh",
+            8
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Tan",
+            30
+          ]
+        ],
+        "COURT": [
+          [
+            "Supreme Court",
+            102
+          ]
+        ],
+        "STATUTE": [
+          [
+            "CPC",
+            409
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Legal Procedures and Criminal Cases",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Birkett v James",
+            18
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Davinder Singh",
+            11
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Judith Prakash",
+            81
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Tian E Zuo",
+            8
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            2923
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Tan",
+            961
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 377A",
+            93
+          ]
+        ],
+        "ORG": [
+          [
+            "Government of Singapore",
+            289
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "NKY",
+            7
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Lim",
+            43
+          ]
+        ],
+        "COURT": [
+          [
+            "Supreme Court",
+            104
+          ]
+        ],
+        "STATUTE": [
+          [
+            "CPC",
+            302
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Judicial Decision-Making and Legal Parties",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Ladd v Marshall",
+            20
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Alex Chew",
+            16
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Chao Hick Tin",
+            73
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Government of Singapore",
+            5
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            2433
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Tan",
+            721
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 34",
+            82
+          ]
+        ],
+        "ORG": [
+          [
+            "Parliament",
+            269
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Win-Win",
+            10
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Tan",
+            24
+          ]
+        ],
+        "COURT": [
+          [
+            "Supreme Court",
+            74
+          ]
+        ],
+        "STATUTE": [
+          [
+            "Penal Code",
+            299
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Legal Outcomes and Accusations",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Ladd v Marshall",
+            56
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Thng",
+            10
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Choo Han Teck",
+            85
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Government of Singapore",
+            8
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            2212
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Tan",
+            879
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 216",
+            71
+          ]
+        ],
+        "ORG": [
+          [
+            "Parliament",
+            235
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Carlier",
+            10
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Tan",
+            34
+          ]
+        ],
+        "COURT": [
+          [
+            "Supreme Court",
+            86
+          ]
+        ],
+        "STATUTE": [
+          [
+            "Penal Code",
+            285
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Legal Evidence and Case Outcomes",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Rylands v Fletcher",
+            20
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Davinder Singh",
+            7
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Judith Prakash",
+            70
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Babel Asia",
+            7
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            2104
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Tan",
+            692
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 18(2)",
+            88
+          ]
+        ],
+        "ORG": [
+          [
+            "Parliament",
+            259
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Chang",
+            7
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Ang",
+            22
+          ]
+        ],
+        "COURT": [
+          [
+            "Supreme Court",
+            79
+          ]
+        ],
+        "STATUTE": [
+          [
+            "CPC",
+            289
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Evidence and Judicial Considerations",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Ladd v Marshall",
+            14
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Davinder Singh",
+            7
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Judith Prakash",
+            55
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Chan Sau Yan",
+            4
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            1867
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Tan",
+            847
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 18(2)",
+            75
+          ]
+        ],
+        "ORG": [
+          [
+            "Parliament",
+            202
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Kiri",
+            6
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Lim",
+            19
+          ]
+        ],
+        "COURT": [
+          [
+            "Supreme Court",
+            72
+          ]
+        ],
+        "STATUTE": [
+          [
+            "Penal Code",
+            189
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Appellate Court Focus",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "ANJ v ANK",
+            19
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Teo",
+            9
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Choo Han Teck",
+            64
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Pragas",
+            7
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            1778
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Tan",
+            733
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 18(2)",
+            71
+          ]
+        ],
+        "ORG": [
+          [
+            "Parliament",
+            164
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Hajime Shinji",
+            13
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Lin",
+            11
+          ]
+        ],
+        "COURT": [
+          [
+            "Supreme Court",
+            45
+          ]
+        ],
+        "STATUTE": [
+          [
+            "MDA",
+            272
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Costs and Parties in Appeal",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Ladd v Marshall",
+            11
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Teo",
+            8
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Sundaresh Menon",
+            52
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Iryan bin Abdul Karim",
+            24
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            1933
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Tan",
+            611
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 300(c)",
+            68
+          ]
+        ],
+        "ORG": [
+          [
+            "Parliament",
+            209
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Ngan",
+            15
+          ]
+        ],
+        "WITNESS": [
+          [
+            "DKhoo",
+            141
+          ]
+        ],
+        "COURT": [
+          [
+            "Supreme Court",
+            53
+          ]
+        ],
+        "STATUTE": [
+          [
+            "CPC",
+            260
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "Evidence and Appeal in Legal Proceedings",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Saunders v Vautier",
+            8
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Grendus",
+            16
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Sundaresh Menon",
+            73
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Yau Kwok Seng",
+            6
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            1531
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Tan",
+            496
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 216",
+            83
+          ]
+        ],
+        "ORG": [
+          [
+            "Parliament",
+            196
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Kumar",
+            9
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Renslade",
+            19
+          ]
+        ],
+        "COURT": [
+          [
+            "Supreme Court",
+            50
+          ]
+        ],
+        "STATUTE": [
+          [
+            "Penal Code",
+            233
+          ]
+        ]
+      }
+    },
+    {
+      "Topic": "First Instance Legal Decisions",
+      "Most Frequent Entities by Label": {
+        "PRECEDENT": [
+          [
+            "Ladd v Marshall",
+            22
+          ]
+        ],
+        "LAWYER": [
+          [
+            "Thng",
+            9
+          ]
+        ],
+        "JUDGE": [
+          [
+            "Yong Pung How",
+            62
+          ]
+        ],
+        "RESPONDENT": [
+          [
+            "Government of Singapore",
+            5
+          ]
+        ],
+        "GPE": [
+          [
+            "Singapore",
+            1753
+          ]
+        ],
+        "OTHER_PERSON": [
+          [
+            "Tan",
+            674
+          ]
+        ],
+        "PROVISION": [
+          [
+            "s 18(2)",
+            70
+          ]
+        ],
+        "ORG": [
+          [
+            "Parliament",
+            178
+          ]
+        ],
+        "PETITIONER": [
+          [
+            "Ilechukwu",
+            8
+          ]
+        ],
+        "WITNESS": [
+          [
+            "Ng",
+            21
+          ]
+        ],
+        "COURT": [
+          [
+            "Syariah Court",
+            63
+          ]
+        ],
+        "STATUTE": [
+          [
+            "CPC",
+            212
+          ]
+        ]
+      }
+    }
+  ]
+}

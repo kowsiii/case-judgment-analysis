@@ -1,19 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Tag, Tooltip, Select, Collapse } from 'antd'
+import { Card, Tag, Select, Collapse } from 'antd'
 import { DocumentView } from './DocumentView'
-
-const topicColors = {
-  'Legal Agreement and Court Proceedings': 'magenta',
-  "Audit Rights and Plaintiffs' Issues": 'red',
-  'Court Decisions and Appeal Cases': 'volcano',
-  'Enforcement Process and Court Decisions': 'orange',
-  'Appeals and Legal Applications': 'gold',
-  'Legal Proceedings and Sentencing': 'lime',
-  "Plaintiffs' Claims and Court Proceedings": 'green',
-  'Rights of Defendants and Plaintiffs': 'cyan',
-  'Defendant Claims and Vessel Issues': 'blue',
-  'Court Offences and Sentencing Issues': 'geekblue'
-}
+import topicColors from './assets/topicColors.json'
 
 function DocumentCard({ document, index, onSelect }) {
   const bodyPreview =
@@ -45,20 +33,15 @@ function DocumentCard({ document, index, onSelect }) {
           marginTop: 14
         }}
       >
-        <Tooltip title={document.dominantTopic['Probability']}>
-          <Tag
-            bordered={false}
-            color={topicColors[document.dominantTopic['Dominant Topic']]}
-          >
-            {document.dominantTopic['Dominant Topic']}
-          </Tag>
-        </Tooltip>
+        <Tag bordered={false} color={topicColors[document?.dominantTopic]}>
+          {document?.dominantTopic}
+        </Tag>
       </div>
     </Card>
   )
 }
 
-export const DocumentsSelection = ({ documents, metadata }) => {
+export const DocumentsSelection = ({ documents, metadata, distinctTopics }) => {
   const [filteredDocuments, setFilteredDocuments] = useState(documents)
   const [selectedTopics, setSelectedTopics] = useState([])
 
@@ -171,11 +154,14 @@ export const DocumentsSelection = ({ documents, metadata }) => {
             </h4>
             <p
               style={{
-                margin: 4
+                margin: 4,
+                textAlign: 'start'
               }}
             >
               {metadata?.catchwords.map((catchword) => (
-                <Tag color='#108ee9'>{catchword}</Tag>
+                <Tag key={catchword} color='#108ee9'>
+                  {catchword}
+                </Tag>
               ))}
             </p>
           </div>
@@ -183,8 +169,6 @@ export const DocumentsSelection = ({ documents, metadata }) => {
       )
     }
   ]
-
-  console.log('metadata', metadata)
 
   useEffect(() => {
     if (selectedDocumentIndex !== null) {
@@ -194,7 +178,7 @@ export const DocumentsSelection = ({ documents, metadata }) => {
     }
   }, [selectedDocumentIndex])
 
-  const options = Object.keys(topicColors).map((topic) => {
+  const options = [...distinctTopics].map((topic) => {
     return {
       value: topicColors[topic],
       label: topic
@@ -232,7 +216,7 @@ export const DocumentsSelection = ({ documents, metadata }) => {
     if (selectedTopics.length > 0) {
       const selectedTopicLabels = selectedTopics.map((item) => item.label)
       const filtered = Object.values(documents).filter((document) =>
-        selectedTopicLabels.includes(document.dominantTopic['Dominant Topic'])
+        selectedTopicLabels.includes(document.dominantTopic)
       )
       setFilteredDocuments(filtered)
     } else {
